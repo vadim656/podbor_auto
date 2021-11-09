@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between items-center mt-8">
+  <div class="flex justify-between items-center mt-8 w-full">
     <div
       v-for="value in info"
       :key="value.info"
