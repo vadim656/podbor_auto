@@ -35,9 +35,7 @@ export default {
 </script>
 
 <style>
-.bg-mor {
-  box-shadow: 0px 2px 40px 10px rgba(0, 0, 0, 0.42);
-}
+
 
 body {
     font-family: 'Oswald', sans-serif !important;
