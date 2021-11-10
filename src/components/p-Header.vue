@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#212121] sticky w-full h-20 top-0 bg-mor mx-auto z-50 flex justify-center items-center">
-  <div class="container flex justify-between items-center text-white ">
-    <div class="text-[36px] font-bold uppercase">
+  <div class="container flex justify-between items-center text-white px-2 lg:px-0">
+    <div class="text-[20px] lg:text-[36px] font-bold uppercase">
       perfect-auto
     </div>
     <div>

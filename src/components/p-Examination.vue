@@ -45,8 +45,8 @@
         </div>
         <!-- /.flex -->
       </div>
-      <div>
-          <a href="">Как мы работаем</a>
+      <div class="w-full flex justify-center ">
+          <a class="border-dotted-[#fff] border-b" href="">Как мы работаем</a>
       </div>
     </div>
     <!-- /.container -->

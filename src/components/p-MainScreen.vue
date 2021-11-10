@@ -1,27 +1,27 @@
 <template>
   <section class="flex justify-center  items-center">
-    <div class="w-full flex justify-center  h-[800px]">
+    <div class="w-full flex justify-center  lg:h-[800px] ">
       <img
         :src="img"
         alt=""
-        class="object-cover object-center w-full  h-[800px] absolute z-[0]"
+        class="object-cover object-center w-full h-[400px] lg:h-[800px] absolute z-[0] "
       />
       <div class="container z-10 flex flex-wrap">
-        <div class="offer w-2/3">
-          <div class="flex flex-col justify-center pl-8 z-1 h-full text-[#fff]">
+        <div class="offer w-full lg:w-2/3 ">
+          <div class="mt-4 lg:mt-0 flex flex-col justify-center w-full items-center lg:items-start px-2 lg:px-0 lg:pl-8 z-1 h-full text-[#fff] ">
             <div
-              class="text-left text-[100px] text-[#fff] font-bold z-10 uppercase"
+              class="text-[42px] lg:text-[100px] text-[#fff] font-bold z-10 uppercase  "
             >
               {{ title }}
             </div>
-            <span class="text-2xl">
+            <span class="lg:text-2xl  text-center lg:text-left">
               Професcиональная помощь при выборе автомобиля <br />
               в г.Краснодар
             </span>
-            <span class="text-[#909090] text-[24px] mt-10">
+            <span class="text-[#909090] text-[18px] text-left w-full  lg:text-[24px] mt-10">
               - Осмотр и полная диагностика
             </span>
-            <span class="text-[#909090] text-[24px] mb-10">
+            <span class="text-[#909090] text-[18px] text-left  w-full lg:text-[24px] mb-10">
               - Полный спектр услуг по проверке и подбору автомобиля <br> от
               бюджетного до элитного
             </span>
@@ -32,24 +32,24 @@
             </button>
           </div>
         </div>
-        <div class="w-1/3 z-10 h-[600px] flex justify-start items-end">
-          <div class="absolute bottom-[0px] animate-bounce">
-            <img :src="imgFace" alt="Славик" />
+        <div class=" w-full lg:w-1/3 z-10 lg:h-[600px] lg:flex justify-start items-end hidden ">
+          <div class="lg:absolute lg:bottom-[0px] top-[100px] animate-bounce ">
+            <img class="w-[50%] lg:w-full " :src="imgFace" alt="Славик" />
           </div>
         </div>
-        <div class="h-40 pl-8 z-10 text-[#fff]">
-          <div class="w-full flex justify-start h-full items-center">
-            <div class="text-[24px] mr-20">
+        <div class="h-[300px] lg:h-40 pl-8 z-10 text-[#fff] hidden lg:block">
+          <div class="w-full flex flex-col lg:flex-row justify-start h-full items-start lg:items-center ">
+            <div class="text-[24px] lg:mr-20">
               <span class="text-[#5960EF] font-bold text-[36px]">5 лет</span>
               <br />на рынке
             </div>
-            <div class="text-[24px] mr-20">
+            <div class="text-[24px] lg:mr-20">
               <span class="text-[#5960EF] font-bold text-[36px]"
                 >3 000 000 млн</span
               >
               <br />сэкономлено клиентам
             </div>
-            <div class="text-[24px] mr-20">
+            <div class="text-[24px] lg:mr-20">
               <span class="text-[#5960EF] font-bold text-[36px]"
                 >более 100</span
               >

@@ -1,23 +1,23 @@
 <template>
-  <section class="flex  justify-center text-white h-[800px] mt-10 ">
+  <section class="flex  justify-center text-white h-full lg:h-[800px] mt-10 ">
     <img
       :src="img"
       :alt="img"
-      class="object-cover object-center w-full  h-[800px] absolute z-[0]"
+      class="object-cover object-center w-full h-[1400px] lg:h-[800px] absolute z-[0]"
     />
     <div
       class="container flex flex-col justify-between py-5  z-10"
     >
       <div class="w-full flex flex-col items-center justify-center">
         <h3 class="text-[36px] font-bold uppercase">Стоимость услуг</h3>
-        <span class="text-[#909090]"
+        <span class="text-[#909090] pb-2 lg:pb-0"
           >Уже подобрали более 200 авто нашим клиентам</span
         >
       </div>
-      <div class="grid grid-cols-3 gap-20 px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-20 px-8">
        
         <div
-          class="flex flex-col justify-between h-[600px] px-10 bg-[rgba(26,31,34,0.5)] backdrop-blur-[10px] rounded"
+          class="flex flex-col justify-between h-[400px] lg:h-[600px] px-10 bg-[rgba(26,31,34,0.5)] backdrop-blur-[10px] rounded"
         >
            <img
             src="../assets/Noise.png"
@@ -51,7 +51,7 @@
           </div>
         </div>
         <div
-          class="flex flex-col justify-between h-[600px] px-10 bg-[rgba(26,31,34,0.5)] backdrop-blur-[10px] rounded"
+          class="flex flex-col justify-between h-[400px] lg:h-[600px] px-10 bg-[rgba(26,31,34,0.5)] backdrop-blur-[10px] rounded"
         >
            <img
             src="../assets/Noise.png"
@@ -85,7 +85,7 @@
           </div>
         </div>
         <div
-          class="flex flex-col justify-between h-[600px] px-10 bg-[rgba(26,31,34,0.5)] backdrop-blur-[10px] rounded"
+          class="flex flex-col justify-between h-[400px] lg:h-[600px] px-10 bg-[rgba(26,31,34,0.5)] backdrop-blur-[10px] rounded"
         >
            <img
             src="../assets/Noise.png"
