@@ -24,7 +24,7 @@ export default {
   },
   created () {
     axios
-      .get('http://perfect-podbor.ru/api/wp-json/wp/v2/posts')
+      .get('http://perfect-podbor.ru/api/wp-json/wp/v2/posts?categories=5')
       .then(response => {
         (this.info = response.data)
        

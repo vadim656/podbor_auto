@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-[#212121] sticky w-full h-20 top-0 bg-mor m-auto">
-  <div class="container flex justify-between items-center    text-white z-50">
-    <div>
-      logosss
+  <div class="bg-[#212121] sticky w-full h-20 top-0 bg-mor mx-auto z-50 flex justify-center items-center">
+  <div class="container flex justify-between items-center text-white ">
+    <div class="text-[36px] font-bold uppercase">
+      perfect-auto
     </div>
     <div>
       +7 (962) 406-00-13
