@@ -1,5 +1,6 @@
 <template>
   <div style="background-color: #1A1F22;" >
+    
     <pHeader/>
     <PMainScreen />
     <PExamination/>
@@ -28,7 +29,7 @@ export default {
     pHeader,
     PExamination,
     PPrices,
-    PFooter
+    PFooter,
   }
 }
 </script>
@@ -40,4 +41,6 @@ body {
     font-family: 'Oswald', sans-serif !important;
     letter-spacing: 0.07em;
 }
+
+
 </style>

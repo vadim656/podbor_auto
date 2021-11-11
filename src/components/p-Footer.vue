@@ -1,10 +1,10 @@
 <template>
-  <section class="h-[300px] bg-[#212121] flex justify-center text-[#fff]">
+  <section class=" lg:h-[300px] bg-[#212121] flex justify-center text-[#fff]">
     <div
-      class="flex flex-wrap items-center justify-between h-full container"
+      class="flex flex-col lg:flex-row flex-wrap items-center justify-between h-full container"
     >
       <div
-        class="h-full flex items-center justify-center flex-col text-[60px] uppercase font-bold"
+        class="h-full flex items-center justify-center flex-col text-[24px] lg:text-[60px] uppercase font-bold"
       >
         perfect-auto
       </div>
@@ -13,32 +13,32 @@
           <li
             class="border-b border-b-[red] border-b-[1px] cursor-pointer py-2"
           >
-            item 1
+            Главная
           </li>
           <li
             class="border-b border-b-[red] border-b-[1px] cursor-pointer py-2"
           >
-            item 2
+            Услуги и цены
           </li>
           <li
             class="border-b border-b-[red] border-b-[1px] cursor-pointer py-2"
           >
-            item 3
+            Гарантия и договор
           </li>
           <li
             class="border-b border-b-[red] border-b-[1px] cursor-pointer py-2"
           >
-            item 4
+            Живые отзывы
           </li>
           <li
             class="border-b border-b-[red] border-b-[1px] cursor-pointer py-2"
           >
-            item 5
+            этапы проверки
           </li>
           <li
             class="border-b border-b-[red] border-b-[1px] cursor-pointer py-2"
           >
-            item 6
+            Контакты
           </li>
         </ul>
       </div>

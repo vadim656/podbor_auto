@@ -1,12 +1,11 @@
 <template>
-  <div class="flex justify-between items-center mt-8 w-full">
+  <div class="flex flex-col lg:flex-row justify-between items-center mt-8 w-full">
     <div
       v-for="value in info"
       :key="value.info"
-      class="flex bg-gray-400 justify-center items-center mx-1 p-8 flex-col w-1/4"
+      class="flex  bg-gray-400 justify-center items-center mx-1 p-8 flex-col w-full my-4 lg:w-1/4"
     >
       <h3>{{ value.title.rendered }}</h3>
-      <p>ID: {{ value.id }}</p>
       <div> {{ value.content.rendered.replace("<p>", '').replace("</p>", '') }} </div>
     </div>
   </div>

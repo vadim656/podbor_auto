@@ -18,10 +18,10 @@
               Професcиональная помощь при выборе автомобиля <br />
               в г.Краснодар
             </span>
-            <span class="text-[#909090] text-[18px] text-left w-full  lg:text-[24px] mt-10">
+            <span class="text-[#909090] text-[16px] text-left w-full  lg:text-[24px] mt-10">
               - Осмотр и полная диагностика
             </span>
-            <span class="text-[#909090] text-[18px] text-left  w-full lg:text-[24px] mb-10">
+            <span class="text-[#909090] text-[16px] text-left  w-full lg:text-[24px] mb-10">
               - Полный спектр услуг по проверке и подбору автомобиля <br> от
               бюджетного до элитного
             </span>
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class=" w-full lg:w-1/3 z-10 lg:h-[600px] lg:flex justify-start items-end hidden ">
-          <div class="lg:absolute lg:bottom-[0px] top-[100px] animate-bounce ">
+          <div class="lg:absolute lg:bottom-[0px] top-[100px] lg:bottom-[0px] ">
             <img class="w-[50%] lg:w-full " :src="imgFace" alt="Славик" />
           </div>
         </div>
