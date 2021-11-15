@@ -10,6 +10,9 @@
         <PBenefits />
       </div>
     </section>
+    <section class="h-full px-8 flex justify-center h-[400px]">
+      <PForm/>
+    </section>
     <PFooter/>
   </div>
 </template>
@@ -21,6 +24,7 @@ import pHeader from './components/p-Header.vue'
 import PExamination from './components/p-Examination.vue'
 import PPrices from './components/p-Prices.vue'
 import PFooter from './components/p-Footer.vue'
+import PForm from './components/p-Form.vue'
 
 export default {
   components: {
@@ -30,6 +34,7 @@ export default {
     PExamination,
     PPrices,
     PFooter,
+    PForm
   }
 }
 </script>

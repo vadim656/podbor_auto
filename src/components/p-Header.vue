@@ -1,12 +1,14 @@
 <template>
   <div
-    class="bg-[#212121] sticky w-full h-20 top-0 bg-mor mx-auto z-50 flex justify-center items-center"
+    class="bg-[#1F1A20] sticky w-full h-20 top-0 bg-mor mx-auto z-50 flex justify-center items-center"
   >
     <div
       class="container flex justify-between items-center text-white px-2 lg:px-0"
     >
       <div class="text-[20px] lg:text-[36px] font-bold uppercase">
-        perfect-auto
+        <img 
+        class="max-h-[70px]"
+        :src="img" alt="" />
       </div>
       <div>
         +7 (962) 406-00-13
@@ -22,16 +24,31 @@
   <div class="header lg:block hidden">
     <div class="progress-container">
       <div class="progress-bar" id="myBar"></div>
-      <div>
-
-
-      </div>
+      <div></div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
+  data () {
+    return {
+      img: null,
+      errors: []
+    }
+  },
+  created () {
+    axios
+      .get('http://perfect-podbor.ru/api/wp-json/acf/v3/posts/2')
+      .then(response => {
+        this.img = response.data.acf.logo_header
+      })
+
+      .catch(e => {
+        this.errors.push(e)
+      })
+  },
   components: {},
   mounted () {
     window.onscroll = function () {
@@ -39,11 +56,14 @@ export default {
     }
 
     function myFunction () {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+      var winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop
+      var height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight
       var scrolled = (winScroll / height) * 100
       document.getElementById('myBar').style.height = scrolled + '%'
-      console.log(scrolled)
+      // console.log(scrolled)
     }
   }
 }
@@ -65,13 +85,11 @@ export default {
   background-color: transparent;
 }
 
-
 .progress-container {
   width: 8px;
   height: 100%;
   background: transparent;
 }
-
 
 .progress-bar {
   height: 100%;

@@ -94,6 +94,5 @@ export default {
 </script>
 
 <style>
-.ss {
-}
+
 </style>
