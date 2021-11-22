@@ -1,26 +1,32 @@
 <template>
   <div
     :class="{
-      'flex w-full justify-between my-4': variant === 'horizontal',
+      'flex w-full flex-col justify-between my-4': variant === 'horizontal'
     }"
   >
-    
     <ul
-      class="list-none p-1.5 rounded-lg text-center overflow-auto whitespace-nowrap w-1/2 flex flex-wrap"
+      class="list-none  rounded-lg text-center overflow-auto whitespace-nowrap m-auto justify-between  flex flex-wrap "
     >
       <li
         v-for="(tab, index) in tabList"
         :key="index"
-        class="px-4 p-8 rounded-lg w-1/2"
+        class="rounded-lg w-[500px] flex justify-center items-center h-[90px]  mt-4 overflow-hidden"
         :class="{
-          'text-blue-600 bg-white shadow-xl': index + 1 === activeTab,
-          'text-white': index + 1 !== activeTab,
+          'text-white bg-gradient-to-r from-[#303483] bg-[#1B1E58] shadow-xl':
+            index + 1 === activeTab,
+          'text-[#1A1F22] bg-white  cursor-pointer': index + 1 !== activeTab
         }"
       >
+        <img
+          class="w-full  h-[90px] max-w-[250px] object-center object-cover rounded-lg"
+          :src="tab.acf.img_tab"
+          :for="`${_uid}${index}`"
+          :alt="tab.acf.img_tab"
+        />
         <label
           :for="`${_uid}${index}`"
-          v-text="tab"
-          class="cursor-pointer block"
+          v-text="tab.title.rendered"
+          class="cursor-pointer flex items-center justify-center w-[250px] h-[90px]  flex-shrink-1 px-4"
         />
         <input
           :id="`${_uid}${index}`"
@@ -28,7 +34,7 @@
           :name="`${_uid}-tab`"
           :value="index + 1"
           v-model="activeTab"
-          class="hidden"
+          class="hidden w-full h-full"
         />
       </li>
     </ul>
@@ -36,8 +42,9 @@
       <div
         :key="index"
         v-if="index + 1 === activeTab"
-        class="flex-grow bg-white rounded-lg shadow-xl p-4 text-[red]"
+        class="flex-grow bg-white rounded-lg shadow-xl p-4 text-[#1A1F22] w-full mt-10"
       >
+        {{ tab.content.rendered }}
         <slot :name="`tabPanel-${index + 1}`" />
       </div>
     </template>
@@ -48,20 +55,20 @@
 export default {
   props: {
     tabList: {
-      type: Array,
-      required: true,
+      type: Object,
+      required: false
     },
     variant: {
       type: String,
       required: false,
-      default: () => "horizontal",
-      validator: (value) => ["horizontal"].includes(value),
-    },
+      default: () => 'horizontal',
+      validator: value => ['horizontal'].includes(value)
+    }
   },
-  data() {
+  data () {
     return {
-      activeTab: 1,
-    };
-  },
-};
+      activeTab: 1
+    }
+  }
+}
 </script>

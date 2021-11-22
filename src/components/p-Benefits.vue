@@ -8,7 +8,10 @@
       <h3>{{ value.title.rendered }}</h3>
       <div> {{ value.content.rendered.replace("<p>", '').replace("</p>", '') }} </div>
     </div>
+
+
   </div>
+
 </template>
 
 <script>

@@ -8,18 +8,13 @@
       <div class="w-full flex flex-col justify-center ">
         <div class="flex justify-between">
           <div class="flex w-full justify-between">
-            <PExaminationTab 
-            variant="horizontal"
-            :tabList="tabList">
-              <template v-slot:tabPanel-1> Content 1 </template>
-              <template v-slot:tabPanel-2> Content 2 </template>
-              <template v-slot:tabPanel-3> Content 3 </template>
-              <template v-slot:tabPanel-4> Content 4 </template>
+            <PExaminationTab variant="horizontal" :tabList="tabList">
+              <template v-slot:tabPanel-1> </template>
             </PExaminationTab>
           </div>
         </div>
 
-        <div class="w-full flex justify-center w-prose">
+        <div class="w-full flex justify-center w-prose mt-10">
           <a class="border-dotted-[#fff] border-b" href="">Как мы работаем</a>
         </div>
       </div>
@@ -35,20 +30,24 @@ import PExaminationTab from './p-ExaminationTab.vue'
 export default {
   data () {
     return {
-      items: [],
       errors: [],
-      tabList: ['Кузов', 'Электроника', 'Шины', 'Tab 4']
+      tabList: null
     }
   },
-  created () {
+  async created () {
     axios
-      .get('http://perfect-podbor.ru/api/wp-json/wp/v2/posts/?categories=4')
+      .get('http://perfect-podbor.ru/api/wp-json/wp/v2/posts/?categories=4' , {
+        timeout: 1000,
+        responseType: 'text',
+        decompress: true,
+      })
       .then(response => {
-        this.items = response.data
+        this.tabList = response.data
       })
       .catch(e => {
         this.errors.push(e)
       })
+
   },
   components: { PExaminationTab }
 }

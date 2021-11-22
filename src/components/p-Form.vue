@@ -43,11 +43,9 @@
     <div class="md:flex md:items-center mb-6">
       <div class="md:w-1/3"></div>
       <label class="md:w-2/3 block text-gray-500 font-bold">
-        <input class="mr-2 leading-tight" 
-        required="required" 
-        type="checkbox" />
+        <input class="mr-2 leading-tight" required="required" type="checkbox" />
         <span class="text-sm">
-          Send me your newsletter!
+          Согласен на обработку данных.
         </span>
       </label>
     </div>
@@ -75,18 +73,14 @@ export default {
       errors: [],
       tel: '',
       //   TG BOT CONFIG
-    //   token: '2144548623:AAGx0ZOfE2p3y73TjSmf16P65LpFCKgxw4Y',
+      //   token: '2144548623:AAGx0ZOfE2p3y73TjSmf16P65LpFCKgxw4Y',
       chatID: '1016837453'
     }
   },
   methods: {
-
-
     submit () {
-      const fullMessege = {
-        Имя: this.name,
-        Телефон: this.tel
-      }
+      let fullMessege = this.name + ' ' + this.tel
+
       console.log(fullMessege)
       const url =
         'https://api.telegram.org/bot2144548623:AAGx0ZOfE2p3y73TjSmf16P65LpFCKgxw4Y/sendMessage?chat_id=1016837453'
@@ -94,8 +88,6 @@ export default {
       axios
         .post(url, {
           chat: this.chatID,
-          new_chat_title: 'Новая заявка',
-          
           text: fullMessege
         })
         .then(response => (this.fullMessege = response.data.id))
