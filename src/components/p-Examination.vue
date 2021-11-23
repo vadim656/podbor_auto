@@ -32,7 +32,7 @@ export default {
     return {
       errors: [],
       tabList: null
-    }
+    };
   },
   async created () {
     axios

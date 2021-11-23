@@ -20,18 +20,18 @@
         <img
           class="w-full  h-[90px] max-w-[250px] object-center object-cover rounded-lg"
           :src="tab.acf.img_tab"
-          :for="`${_uid}${index}`"
+          :for="`${id}${index}`"
           :alt="tab.acf.img_tab"
         />
         <label
-          :for="`${_uid}${index}`"
+          :for="`${id}${index}`"
           v-text="tab.title.rendered"
           class="cursor-pointer flex items-center justify-center w-[250px] h-[90px]  flex-shrink-1 px-4"
         />
         <input
-          :id="`${_uid}${index}`"
+          :id="`${id}${index}`"
           type="radio"
-          :name="`${_uid}-tab`"
+          :name="`${id}-tab`"
           :value="index + 1"
           v-model="activeTab"
           class="hidden w-full h-full"
@@ -44,7 +44,7 @@
         v-if="index + 1 === activeTab"
         class="flex-grow bg-white rounded-lg shadow-xl p-4 text-[#1A1F22] w-full mt-10"
       >
-        {{ tab.content.rendered }}
+        {{ tab.content.rendered.replace(/(\<(\/?[^>]+)>)/g, '')  }}
         <slot :name="`tabPanel-${index + 1}`" />
       </div>
     </template>
@@ -68,7 +68,8 @@ export default {
   data () {
     return {
       activeTab: 1
-    }
-  }
+    };
+  },
+ 
 }
 </script>

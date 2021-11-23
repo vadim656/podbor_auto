@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.bord {
+    @apply border-2 border-red-900;
+}
