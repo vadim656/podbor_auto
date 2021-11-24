@@ -6,9 +6,11 @@
       class="container flex justify-between items-center text-white px-2 lg:px-0"
     >
       <div class="text-[20px] lg:text-[36px] font-bold uppercase">
+        <router-link to="/">
         <img 
         class="max-h-[70px]"
         :src="img" alt="" />
+        </router-link>
       </div>
       <div>
         +7 (962) 406-00-13
@@ -21,12 +23,7 @@
     </div>
     <!-- /.container -->
   </div>
-  <div class="header lg:block hidden">
-    <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
-      <div></div>
-    </div>
-  </div>
+  
 </template>
 
 <script>
@@ -50,22 +47,7 @@ export default {
       })
   },
   components: {},
-  mounted () {
-    window.onscroll = function () {
-      myFunction()
-    }
-
-    function myFunction () {
-      var winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop
-      var height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight
-      var scrolled = (winScroll / height) * 100
-      document.getElementById('myBar').style.height = scrolled + '%'
-      // console.log(scrolled)
-    }
-  }
+  
 }
 </script>
 
@@ -74,26 +56,5 @@ export default {
   box-shadow: 0px 2px 40px 10px rgba(0, 0, 0, 0.42);
 }
 
-.header {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 50px;
-  z-index: 999999;
-  width: 8px;
-  height: 50%;
-  background-color: transparent;
-}
 
-.progress-container {
-  width: 8px;
-  height: 100%;
-  background: transparent;
-}
-
-.progress-bar {
-  height: 100%;
-  background: #04aa6d;
-  width: 8px;
-}
 </style>

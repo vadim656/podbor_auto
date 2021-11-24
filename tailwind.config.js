@@ -6,21 +6,24 @@ module.exports = {
       './src/views/*.{html,js,vue}',
       './src/App.vue',
       './src/index.css',
+      './node_modules/tippy.js/dist/tippy.css'
     ],
     options: {
-      keyframes: true,
-    },
+      keyframes: true
+    }
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      animation: ['hover', 'focus'],
-    },
+      animation: ['hover', 'focus']
+    }
   },
   variants: {
-    extend: {},
+    extend: {
+      transitionProperty: ['hover', 'focus']
+    },
     animation: ['responsive', 'motion-safe', 'motion-reduce']
   },
   plugins: [],
-  mode: 'jit',
+  mode: 'jit'
 }
