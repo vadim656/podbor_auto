@@ -9,11 +9,15 @@
     <PMainScreen />
     <PExamination />
     <PPrices />
+    <section>
+      <PLiked/>
+    </section>
     <section class=" h-full px-8">
       <div class="flex w-full">
         <PBenefits />
       </div>
     </section>
+    
     <section class="h-full px-8 flex justify-center h-[400px]">
       <PForm />
     </section>
@@ -29,6 +33,7 @@ import PExamination from '/src/components/p-Examination.vue'
 import PPrices from '/src/components/p-Prices.vue'
 import PFooter from '/src/components/p-Footer.vue'
 import PForm from '/src/components/p-Form.vue'
+import PLiked from '/src/components/p-Liked.vue'
 
 export default {
   components: {
@@ -38,7 +43,8 @@ export default {
     PExamination,
     PPrices,
     PFooter,
-    PForm
+    PForm,
+    PLiked
   },
   mounted () {
     window.onscroll = function () {

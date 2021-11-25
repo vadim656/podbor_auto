@@ -1,16 +1,16 @@
 <template>
   <div
     :class="{
-      'flex w-full flex-col justify-between my-4': variant === 'horizontal'
+      'flex w-full flex-col justify-between mb-4': variant === 'horizontal'
     }"
   >
     <ul
-      class="list-none  rounded-lg text-center overflow-auto whitespace-nowrap m-auto justify-between  flex flex-wrap "
+      class="list-none  rounded-lg text-center overflow-auto whitespace-nowrap m-auto grid grid-cols-1 lg:grid-cols-2 gap-4"
     >
       <li
         v-for="(tab, index) in tabList"
         :key="index"
-        class="rounded-lg w-[420px]  flex justify-center items-center h-[90px]  mt-4 overflow-hidden"
+        class="rounded-lg w-[320px] lg:w-[420px]  flex justify-center items-center h-[90px] overflow-hidden"
         :class="{
           'text-white bg-gradient-to-r from-[#303483] bg-[#1B1E58] shadow-xl':
             index + 1 === activeTab,
@@ -18,7 +18,7 @@
         }"
       >
         <img
-          class="w-full  h-[90px] max-w-[250px] object-center object-cover rounded-lg"
+          class="w-full  h-[90px] max-w-[200px] lg:max-w-[250px] object-center object-cover rounded-lg"
           :src="tab.acf.img_tab"
           :for="`${index}`"
           :alt="tab.acf.img_tab"
@@ -41,7 +41,7 @@
       <div
         :key="index"
         v-if="index + 1 === activeTab"
-        class="flex-grow bg-white rounded-lg shadow-xl p-4 text-[#1A1F22] w-full mt-10 "
+        class="lg:flex lg:flex-grow bg-white rounded-lg shadow-xl p-4 text-[#1A1F22] w-[320px] lg:w-full mt-10 mx-auto hidden"
       >
         {{ tab.content.rendered.replace(/(\<(\/?[^>]+)>)/g, '') }}
         <slot :name="`tabPanel-${index + 1}`" />
