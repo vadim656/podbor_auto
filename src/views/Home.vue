@@ -7,8 +7,9 @@
       </div>
     </div>
     <PMainScreen />
+    
+    <!-- <PPrices /> -->
     <PExamination />
-    <PPrices />
     <section>
       <PLiked/>
     </section>
@@ -30,7 +31,7 @@ import PBenefits from '/src/components/p-Benefits.vue'
 import PMainScreen from '/src/components/p-MainScreen.vue'
 import pHeader from '/src/components/p-Header.vue'
 import PExamination from '/src/components/p-Examination.vue'
-import PPrices from '/src/components/p-Prices.vue'
+// import PPrices from '/src/components/p-Prices.vue'
 import PFooter from '/src/components/p-Footer.vue'
 import PForm from '/src/components/p-Form.vue'
 import PLiked from '/src/components/p-Liked.vue'
@@ -41,7 +42,7 @@ export default {
     PMainScreen,
     pHeader,
     PExamination,
-    PPrices,
+    // PPrices,
     PFooter,
     PForm,
     PLiked

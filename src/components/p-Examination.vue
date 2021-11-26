@@ -6,13 +6,14 @@
       </div>
       <!-- <div class="grid grid-cols-1 lg:grid-cols-3 gap-10"></div> -->
       <div class="w-full flex flex-col justify-center ">
-        <div class="flex flex-col lg:flex-row justify-between items-start">
-          <div class="flex w-full lg:w-3/5 justify-between items-start">
+        
+          <div class="flex w-full jusify-between ">
+          
             <PExaminationTab variant="horizontal" :tabList="tabList">
-              <template v-slot:tabPanel-1> </template>
+              <!-- s -->
             </PExaminationTab>
           </div>
-          <div class="flex relative justify-center w-full lg:w-2/5  ml-6  h-[510px]">
+          <!-- <div class="flex relative justify-center w-full lg:w-2/5  ml-6  h-[510px]">
             <img
               class="img-responsive h-auto object-cover rounded-lg filter brightness-[0.6]"
               src="../assets/avto.jpg"
@@ -47,8 +48,8 @@
                 </p>
               </span>
             </div>
-          </div>
-        </div>
+          </div> -->
+
 
         <div class="w-full flex justify-center w-prose mt-10">
           <router-link class="border-dotted-[#fff] border-b" to="/about">Как мы работаем</router-link>

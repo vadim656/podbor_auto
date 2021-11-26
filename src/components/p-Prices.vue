@@ -1,5 +1,5 @@
 <template>
-  <section class="flex  justify-center text-white h-full lg:h-[800px] mt-10 ">
+  <section class="flex  justify-center text-white h-full lg:h-[800px]">
     <img
       :src="img"
       :alt="items"
