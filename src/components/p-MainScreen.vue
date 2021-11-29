@@ -38,7 +38,7 @@
             </button>
           </div>
           <div
-            class="w-full flex flex-col lg:flex-row justify-start h-full items-start lg:items-center "
+            class="w-full flex flex-col lg:flex-row sm:justify-start h-full items-center lg:items-center py-4"
           >
             <div class="text-[24px] lg:mr-20 text-white">
               <span class="text-[#5960EF] font-bold text-[36px]">5 лет</span>
@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-        <div class=" w-full h-[700px] sm:h-full relative">
+        <div class=" w-full h-[800px] sm:h-full relative py-4">
           <PSlider/>
         </div>
       </div>

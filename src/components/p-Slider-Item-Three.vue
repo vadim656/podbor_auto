@@ -10,8 +10,8 @@
       
       class="object-cover object-center w-full  top-0 left-0 h-full opacity-[20%] absolute z-[0]"
     />
-    <div class="flex pt-2 z-[10]">
-      <div class="text-[24px] font-bold uppercase text-white">
+    <div class="flex justify-center pt-4 z-[10]">
+      <div class="text-[24px]  text-center font-bold uppercase text-white">
        {{ title }}
       </div>
     </div>
@@ -20,7 +20,7 @@
         <li>
          
         </li>
-        <li>
+        <li class="text-[14px]">
           {{ desc.replace(/(\<(\/?[^>]+)>)/g, '') }}
         </li>
       </ul>
@@ -30,7 +30,7 @@
 от {{ price }} руб.        
       </span>
       <button
-        class="mx-10 px-6 py-4 bg-gradient-to-r from-[#303483] bg-[#1B1E58] hover:bg-[#303483] text-white mt-4 rounded"
+        class="sm:mx-10 px-6 py-4 bg-gradient-to-r from-[#303483] bg-[#1B1E58] hover:bg-[#303483] text-white mt-4 rounded"
       >
         Заказать диагностику
       </button>

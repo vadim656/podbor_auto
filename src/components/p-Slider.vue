@@ -2,20 +2,17 @@
   <div class="relative h-full z-[10]">
     <swiper
       :slidesPerView="'auto'"
-      :spaceBetween="10"
+      :spaceBetween="0"
       :loop="true"
       :pagination="{
         clickable: true
       }"
-      :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false
-      }"
+      
        :speed="600" 
-       :parallax="true"
+       :parallax="false"
       class="mySwiper"
     >
-    <div slot="container-start" class="parallax-bg" :style="{'background-image': 'url(http://perfect-podbor.ru/api/wp-content/uploads/2021/11/peeww.webp)'}" data-swiper-parallax="-3%"></div>
+    <div slot="container-start" class="parallax-bg object-cover object-bottom" :style="{'background-image': 'url(http://perfect-podbor.ru/api/wp-content/uploads/2021/11/dart_board_top.png)'}" ></div>
       <swiper-slide>
         <PSliderItemOne/>
       </swiper-slide>
@@ -36,7 +33,6 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 
 // Import Swiper styles
 import 'swiper/css'
-
 import 'swiper/css/pagination'
 
 // import Swiper core and required modules

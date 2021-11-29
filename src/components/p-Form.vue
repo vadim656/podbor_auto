@@ -54,10 +54,10 @@
       <div class="md:w-2/3">
         <button
           @click="submit"
-          class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+          class="shadow px-6 py-4 bg-gradient-to-r from-[#303483] bg-[#1B1E58] hover:bg-[#303483] text-white  rounded"
           type="button"
         >
-          Sign Up
+         Отправить
         </button>
       </div>
     </div>

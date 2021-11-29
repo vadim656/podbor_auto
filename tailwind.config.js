@@ -22,6 +22,7 @@ module.exports = {
     extend: {
       transitionProperty: ['hover', 'focus']
     },
+    grayscale: ['hover', 'focus'],
     animation: ['responsive', 'motion-safe', 'motion-reduce']
   },
   plugins: [],

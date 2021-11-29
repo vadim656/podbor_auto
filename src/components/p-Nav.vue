@@ -11,14 +11,14 @@
             <img class="h-16 w-auto object-cover" :src="img" alt="" />
           </router-link>
           <div class="hidden ml-10 space-x-8 lg:block">
-            <a
+            <router-link
               v-for="link in navigation"
               :key="link.name"
-              :href="link.href"
+              :to="link.href"
               class="text-base font-medium text-white hover:text-indigo-50"
             >
               {{ link.name }}
-            </a>
+            </router-link>
           </div>
         </div>
         <div class="lg:ml-10 lg:space-x-4">
@@ -38,7 +38,7 @@
         <router-link
           v-for="link in navigation"
           :key="link.name"
-          to="{{link.href}}"
+          :to="link.href"
           class="text-base font-medium text-white hover:text-indigo-50"
         >
           {{ link.name }}

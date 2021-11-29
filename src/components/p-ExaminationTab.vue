@@ -11,7 +11,7 @@
       <li
         v-for="(tab, index) in tabList"
         :key="index"
-        class="rounded-lg max-w-[320px] lg:w-[420px]  flex justify-center items-center h-[90px] overflow-hidden"
+        class="rounded-lg max-w-[320px] lg:max-w-[420px]  flex justify-between sm:justify-center items-center h-[90px] overflow-hidden"
         :class="{
           'text-white bg-gradient-to-r from-[#303483] bg-[#1B1E58] shadow-xl':
             index + 1 === activeTab,
@@ -19,7 +19,7 @@
         }"
       >
         <img
-          class="hidden sm:block w-full h-[90px] w-[100px] lg:max-w-[250px] object-center object-cover rounded-lg"
+          class="hidden sm:block w-full h-[90px] w-[100px] lg:w-[250px] object-center object-cover rounded-lg"
           :src="tab.acf.img_tab"
           :for="`${index}`"
           :alt="tab.acf.img_tab"
@@ -30,10 +30,10 @@
           class="cursor-pointer flex items-center justify-center w-[250px] h-[90px]  flex-shrink-1 px-4"
         />
         <router-link 
-        class="block lg:hidden flex justify-center items-center pr-1 bg-[#2F3382] h-full w-[46px]"
+        class="block lg:hidden flex justify-center items-center pr-1 bg-[#2F3382] text-white h-full w-[150px]"
         to="/">
           
-            <svg
+            <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
             fill="none"
@@ -46,7 +46,7 @@
               stroke-width="2"
               d="M9 5l7 7-7 7"
             />
-          </svg>
+          </svg> -->
           <span class="text-[12px]">Подробнее</span>
         </router-link>
         <input

@@ -18,6 +18,12 @@
         <PBenefits />
       </div>
     </section>
+    <section class=" h-full my-8" >
+      <PReport/>
+    </section>
+    <section>
+      <PPopular/>
+    </section>
     
     <section class="h-full px-8 flex justify-center h-[400px]">
       <PForm />
@@ -35,6 +41,8 @@ import PExamination from '/src/components/p-Examination.vue'
 import PFooter from '/src/components/p-Footer.vue'
 import PForm from '/src/components/p-Form.vue'
 import PLiked from '/src/components/p-Liked.vue'
+import PReport from '/src/components/p-Report.vue'
+import PPopular from '/src/components/p-Popular.vue'
 
 export default {
   components: {
@@ -45,7 +53,9 @@ export default {
     // PPrices,
     PFooter,
     PForm,
-    PLiked
+    PLiked,
+    PReport,
+    PPopular
   },
   mounted () {
     window.onscroll = function () {
