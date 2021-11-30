@@ -21,14 +21,14 @@
     <section class=" h-full my-8" >
       <PReport/>
     </section>
-    <section>
+    <section class="mt-10">
       <PPopular/>
     </section>
     
-    <section class="h-full px-8 flex justify-center h-[400px]">
+    <section class="h-full px-8 flex justify-center h-[400px] pb-8">
       <PForm />
     </section>
-    <PFooter />
+
   </div>
 </template>
 
@@ -38,7 +38,6 @@ import PMainScreen from '/src/components/p-MainScreen.vue'
 import pHeader from '/src/components/p-Header.vue'
 import PExamination from '/src/components/p-Examination.vue'
 // import PPrices from '/src/components/p-Prices.vue'
-import PFooter from '/src/components/p-Footer.vue'
 import PForm from '/src/components/p-Form.vue'
 import PLiked from '/src/components/p-Liked.vue'
 import PReport from '/src/components/p-Report.vue'
@@ -50,8 +49,6 @@ export default {
     PMainScreen,
     pHeader,
     PExamination,
-    // PPrices,
-    PFooter,
     PForm,
     PLiked,
     PReport,

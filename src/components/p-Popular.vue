@@ -1,13 +1,14 @@
 <template>
-  <div class="grid grid-cols-[2fr,3fr] container mx-auto gap-4">
+  <div class="grid grid-cols-[2fr,3fr] container mx-auto gap-4 ">
     <div class="grid grid-cols-1 justify-items-end grid-rows-2 gap-4">
-      <div class="bord w-[400px] col-end-auto rounded-lg overflow-hidden bg-gray text-white flex justify-center items-center">
-          <span class="uppercase text-2xl font-bold"> Популярные услуги</span>
+      <div class="w-[400px] col-end-auto rounded-lg overflow-hidden bg-[#1F2528] text-white flex justify-center items-center">
+          <span class="uppercase text-2xl"> Популярные <br> услуги</span>
          
     </div>
-      <div class="bord  rounded-lg overflow-hidden w-full">
-        <span>Смотреть</span>
-        <button>Смотреть все услуги</button>
+      <div class="rounded-lg overflow-hidden w-full flex justify-center items-center bg-gradient-to-r from-[#303483] bg-[#1B1E58] relative">
+        <span class="absolute text-[120px] font-bold text-white opacity-10 top-0 right-[10%] z-[2]">Смотреть</span>
+        <img class="object-cover absolute top-0 left-0 z-[1]" src="../assets/image/04.jpg" alt="">
+        <router-link to="/services" class="ml-[20%] bg-[#fff] px-6 py-4 rounded z-[3]">Смотреть все услуги</router-link>
       </div>
     </div>
     <div class="grid grid-cols-2 grid-rows-[250px,250px] gap-4">

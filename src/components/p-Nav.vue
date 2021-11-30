@@ -7,7 +7,7 @@
       >
         <div class="flex items-center">
           <router-link to="/">
-            <span class="sr-only">Workflow</span>
+            <span class="sr-only">eee</span>
             <img class="h-16 w-auto object-cover" :src="img" alt="" />
           </router-link>
           <div class="hidden ml-10 space-x-8 lg:block">
@@ -51,7 +51,7 @@
 <script>
 const navigation = [
   { name: 'Что проверяем', href: '/' },
-  { name: 'Услуги', href: '/' },
+  { name: 'Услуги', href: '/services' },
   { name: 'Документы', href: '/' },
   { name: 'О компании', href: '/about' }
 ]

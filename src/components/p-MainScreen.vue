@@ -1,12 +1,11 @@
 <template>
   <section class="flex justify-center  items-center">
     <div class="w-full flex justify-center  lg:h-[800px] bg-[#1A1F22]">
-      
       <div
         class="z-10 grid grid-cols-1 grid-row-[1fr,auto] sm:grid-cols-[3fr,2fr] w-full items-stretch overflow-hidden"
       >
         <div
-          class="offer w-full h-full  flex flex-col justify-items-center justify-self-center pl-[5%]" 
+          class="offer w-full h-full  flex flex-col justify-items-center justify-self-center pl-[5%]"
         >
           <div
             class="mt-4 lg:mt-0 flex flex-col justify-center w-full items-center lg:items-start px-2 lg:px-0 lg:pl-8 z-1 h-full text-[#fff] "
@@ -59,7 +58,7 @@
           </div>
         </div>
         <div class=" w-full h-[800px] sm:h-full relative py-4">
-          <PSlider/>
+          <PSlider />
         </div>
       </div>
 
@@ -69,11 +68,10 @@
 </template>
 
 <script>
-
-
 import axios from 'axios'
 import PSlider from './p-Slider.vue'
-
+//anime
+// import anime from 'animejs/lib/anime.es.js'
 
 export default {
   data () {
@@ -90,7 +88,7 @@ export default {
     axios
       .get('http://perfect-podbor.ru/api/wp-json/acf/v3/posts/2')
       .then(response => {
-        (this.button = response.data.acf.button_name),
+        ;(this.button = response.data.acf.button_name),
           (this.title = response.data.acf.offertext),
           (this.imgFace = response.data.acf.kim_chlen),
           (this.img = response.data.acf.img_main_page)
@@ -99,14 +97,21 @@ export default {
       .catch(e => {
         this.errors.push(e)
       })
-    
   },
-  methods: {
-  }
+  methods: {},
+  // updated () {
+  //   var elements = document.querySelectorAll('span')
+  //   anime({
+  //     targets: elements,
+  //     direction: 'alternate',
+  //     opacity: [0, 1],
+  //     translateY: [100, 0],
+  //     delay: anime.stagger(50, { start: 100 }),
+  //     loop: false,
+  //     easing: 'linear'
+  //   })
+  // }
 }
 </script>
 
-<style>
-
-
-</style>
+<style></style>

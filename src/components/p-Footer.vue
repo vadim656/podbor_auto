@@ -1,5 +1,5 @@
 <template>
-  <section class=" lg:h-[300px] bg-[#212121] flex justify-center text-[#fff]">
+  <section class=" lg:h-[300px] bg-[#212121] flex justify-center text-[#fff] pt-10">
     <div
       class="flex flex-col lg:flex-row flex-wrap items-center justify-between h-full container"
     >
