@@ -20,12 +20,12 @@
               в г.Краснодар
             </span>
             <span
-              class="text-[#909090] text-[16px] text-left w-full  lg:text-[24px] mt-10"
+              class="hidden text-[#909090] text-[16px] text-left w-full  lg:text-[24px] mt-10"
             >
               - Осмотр и полная диагностика
             </span>
             <span
-              class="text-[#909090] text-[16px] text-left  w-full lg:text-[24px] mb-10"
+              class="hidden text-[#909090] text-[16px] text-left  w-full lg:text-[24px] mb-10"
             >
               - Полный спектр услуг по проверке и подбору автомобиля <br />
               от бюджетного до элитного
@@ -57,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class=" w-full h-[800px] sm:h-full relative py-4 slider">
+        <div class=" w-full h-[650px] sm:h-[800px] sm:h-full relative  slider">
           <PSlider />
         </div>
       </div>

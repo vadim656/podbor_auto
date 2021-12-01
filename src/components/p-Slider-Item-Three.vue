@@ -1,7 +1,7 @@
 <template>
   <div
     class="rounded-lg 
-     absolute sm:w-[500px] h-[600px] 
+     absolute sm:w-[500px]  gap-4 h-[500px]
      flex flex-col justify-between  px-10 bg-[rgba(26,31,34,0.5)] 
     backdrop-blur-[10px] slide"
   >
@@ -20,7 +20,7 @@
         <li>
          
         </li>
-        <li class="text-[14px]">
+        <li class="text-[12px] sm:text-[14px]">
           {{ desc.replace(/(\<(\/?[^>]+)>)/g, '') }}
         </li>
       </ul>

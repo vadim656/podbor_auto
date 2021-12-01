@@ -1,8 +1,8 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class=" bg-[#1A1F22] pt-4 pb-8 min-h-screen">
+  <div class=" bg-[#1A1F22]  pb-8 min-h-screen">
     <div class="w-full text-center py-8">
-      <h3 class="text-[24px] text-white lg:text-[36px] font-bold uppercase">
+      <h3 class="text-[24px] text-white lg:text-[36px] font-bold ">
         Услуги
       </h3>
     </div>
@@ -18,16 +18,16 @@
         <div class="flex-1 flex flex-col pb-8">
           <img
             v-if="service.acf.service_img.length != null"
-            class="w-full h-[250px] flex-shrink-0 mx-auto object-cover"
+            class="w-full h-[150px] sm:h-[250px] flex-shrink-0 mx-auto object-cover"
             :src="service.acf.service_img"
             alt=""
           />
-          <h3 class="mt-6 text-[18px]  font-bold">
+          <h3 class="mt-6 px-2 text-[14px] sm:text-[18px]  font-bold">
             {{ service.acf.service_name }}
           </h3>
           <dl class="my-2 flex-grow flex flex-col justify-between">
             <dt class="sr-only">Title</dt>
-            <dd class="text-gray-500 text-sm mb-4">
+            <dd class="text-gray-500 text-[12px] sm:text-[14px] mb-4">
               {{ service.acf.service_cat }}
             </dd>
             <dt class="sr-only">Role</dt>

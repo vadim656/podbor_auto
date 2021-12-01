@@ -12,7 +12,7 @@
        :parallax="false"
       class="mySwiper"
     >
-    <div slot="container-start" class="parallax-bg object-cover object-bottom " :style="{'background-image': 'url(http://perfect-podbor.ru/api/wp-content/uploads/2021/11/dart_board_top.png)'}" ></div>
+    <div slot="container-start" class="parallax-bg object-cover object-top" :style="{'background-image': 'url(http://perfect-podbor.ru/api/wp-content/uploads/2021/11/dart_board_top.png)'}" ></div>
       <swiper-slide class="mr-4 sm:mr-0">
         <PSliderItemOne/>
       </swiper-slide>
