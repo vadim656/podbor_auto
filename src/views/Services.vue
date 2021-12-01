@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class=" bg-[#1A1F22] pt-4 pb-8">
+  <div class=" bg-[#1A1F22] pt-4 pb-8 min-h-screen">
     <div class="w-full text-center py-8">
       <h3 class="text-[24px] text-white lg:text-[36px] font-bold uppercase">
         Услуги
@@ -8,7 +8,7 @@
     </div>
     <ul
       role="list"
-      class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  container mx-auto"
+      class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  container mx-auto px-4 sm:px-0"
     >
       <li
         v-for="service in services"
@@ -44,6 +44,7 @@
             <div class="w-0 flex-1 flex">
               <a
                 href="https://t.me/foxsisss"
+                target="_blank"
                 class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500"
               >
                 <svg
@@ -101,9 +102,15 @@ export default {
       targets: elements,
       direction: 'alternate',
       opacity: [0, 1],
-      delay: anime.stagger(100, { start: 500 }),
+      delay: anime.stagger(50, { start: 700 }),
       loop: false,
-      easing: 'linear'
+      easing: 'easeInOutExpo'
+    }),
+    anime({
+      targets: 'h3',
+      opacity: [0, 1],
+      delay: 500,
+      easing: 'easeInOutExpo'
     })
   }
 }

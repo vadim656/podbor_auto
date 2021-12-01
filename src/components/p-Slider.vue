@@ -12,14 +12,14 @@
        :parallax="false"
       class="mySwiper"
     >
-    <div slot="container-start" class="parallax-bg object-cover object-bottom" :style="{'background-image': 'url(http://perfect-podbor.ru/api/wp-content/uploads/2021/11/dart_board_top.png)'}" ></div>
-      <swiper-slide>
+    <div slot="container-start" class="parallax-bg object-cover object-bottom " :style="{'background-image': 'url(http://perfect-podbor.ru/api/wp-content/uploads/2021/11/dart_board_top.png)'}" ></div>
+      <swiper-slide class="mr-4 sm:mr-0">
         <PSliderItemOne/>
       </swiper-slide>
-      <swiper-slide>
+      <swiper-slide class="mr-4 sm:mr-0">
         <PSliderItemTwo/>
       </swiper-slide>
-       <swiper-slide>
+       <swiper-slide class="mr-4 sm:mr-0">
         <PSliderItemThree/>>
       </swiper-slide>
 
@@ -99,6 +99,10 @@ export default {
 .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
-  background-color: #1A1D57;
-}</style
->>
+  background-color: #fff;
+}
+.swiper-pagination-bullet-active{
+  background-color: #272d83;
+}
+
+</style>

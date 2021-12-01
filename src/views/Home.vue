@@ -1,11 +1,11 @@
 <template>
   <div style="background-color: #1A1F22;">
-    <div class="header lg:block hidden">
+    <!-- <div class="header lg:block hidden">
       <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
         <div></div>
       </div>
-    </div>
+    </div> -->
     <PMainScreen />
     
     <!-- <PPrices /> -->
@@ -21,13 +21,13 @@
     <section class=" h-full my-8" >
       <PReport/>
     </section>
-    <section class="mt-10">
+    <section class="my-8 py-8">
       <PPopular/>
     </section>
     
-    <section class="h-full px-8 flex justify-center h-[400px] pb-8">
+    <!-- <section class="h-full px-8 flex justify-center h-[400px] pb-8">
       <PForm />
-    </section>
+    </section> -->
 
   </div>
 </template>
@@ -54,22 +54,22 @@ export default {
     PReport,
     PPopular
   },
-  mounted () {
-    window.onscroll = function () {
-      myFunction()
-    }
+  // mounted () {
+  //   window.onscroll = function () {
+  //     myFunction()
+  //   }
 
-    function myFunction () {
-      var winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop
-      var height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight
-      var scrolled = (winScroll / height) * 100
-      document.getElementById('myBar').style.height = scrolled + '%'
-      // console.log(scrolled)
-    }
-  }
+  //   function myFunction () {
+  //     var winScroll =
+  //       document.body.scrollTop || document.documentElement.scrollTop
+  //     var height =
+  //       document.documentElement.scrollHeight -
+  //       document.documentElement.clientHeight
+  //     var scrolled = (winScroll / height) * 100
+  //     document.getElementById('myBar').style.height = scrolled + '%'
+  //     // console.log(scrolled)
+  //   }
+  // }
 }
 </script>
 

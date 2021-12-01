@@ -39,17 +39,17 @@
           <div
             class="w-full flex flex-col lg:flex-row sm:justify-start h-full items-center lg:items-center py-4"
           >
-            <div class="text-[24px] lg:mr-20 text-white">
+            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left">
               <span class="text-[#5960EF] font-bold text-[36px]">5 лет</span>
               <br />на рынке
             </div>
-            <div class="text-[24px] lg:mr-20 text-white">
+            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left">
               <span class="text-[#5960EF] font-bold text-[36px]"
-                >3 000 000 млн</span
+                >3 000 000 ₽</span
               >
               <br />сэкономлено клиентам
             </div>
-            <div class="text-[24px] lg:mr-20 text-white">
+            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left">
               <span class="text-[#5960EF] font-bold text-[36px]"
                 >более 100</span
               >
@@ -57,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class=" w-full h-[800px] sm:h-full relative py-4">
+        <div class=" w-full h-[800px] sm:h-full relative py-4 slider">
           <PSlider />
         </div>
       </div>
@@ -71,7 +71,7 @@
 import axios from 'axios'
 import PSlider from './p-Slider.vue'
 //anime
-// import anime from 'animejs/lib/anime.es.js'
+import anime from 'animejs/lib/anime.es.js'
 
 export default {
   data () {
@@ -99,18 +99,17 @@ export default {
       })
   },
   methods: {},
-  // updated () {
-  //   var elements = document.querySelectorAll('span')
-  //   anime({
-  //     targets: elements,
-  //     direction: 'alternate',
-  //     opacity: [0, 1],
-  //     translateY: [100, 0],
-  //     delay: anime.stagger(50, { start: 100 }),
-  //     loop: false,
-  //     easing: 'linear'
-  //   })
-  // }
+  updated () {
+    var elements = document.querySelectorAll('.swiper-slide')
+    anime({
+      targets: elements,
+      direction: 'alternate',
+      opacity: [0, 1],
+      delay: anime.stagger(50, { start: 100 }),
+      loop: false,
+      easing: 'linear'
+    })
+  }
 }
 </script>
 

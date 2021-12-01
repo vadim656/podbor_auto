@@ -1,6 +1,6 @@
 <template>
   <section class="flex  justify-center  items-center text-white">
-    <div class="container py-8 mt-8 h-full ">
+    <div class="container py-8 sm:mt-8 h-full ">
       <div class="w-full flex justify-center h-20">
         <h3 class="text-[24px] lg:text-[36px] font-bold uppercase ">
           Что мы проверяем

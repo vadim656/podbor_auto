@@ -1,14 +1,14 @@
 <template>
-  <div class="container mx-auto h-full">
+  <div class="container mx-auto min-h-screen">
     <h1 class=" w-full text-center text-2xl my-10">О компании</h1>
-    <div class="grid grid-cols-1 sm:grid-cols-[40%,60%] gap-2 w-full h-full">
-      <div class="bord sm:h-[200px]">
+    <div class="grid grid-cols-1 sm:grid-cols-[40%,60%] gap-4 w-full h-full">
+      <div class="bord  h-full">
         <h3 class="text-center">{{ title }}</h3>
          <br />
-        <span>{{ info }} </span>
+        <span class="h-full">{{ info }} </span>
       </div>
       <!-- /.bord -->
-      <div class="bord sm:h-[200px] mt-4">
+      <div class="sm:h-[200px]">
         <img class="responsive rounded-xl" :src="img" alt="" />
       </div>
       <!-- /.bord -->
