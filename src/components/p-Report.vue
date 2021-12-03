@@ -1,9 +1,9 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div class="relative  bg-[#1F1A20] sm:h-[500px] overflow-hidden">
-    <img class="absolute z-10 right-[-10%] sm:right-0 w-[200px] sm:w-[400px] bottom-[300px] sm:bottom-[160px] " src="../assets/calculator_right.png"  alt="">
+    <!-- <img class="absolute z-10 right-[-10%] sm:left-[400px] sm:top-[50px] w-[200px] sm:w-[400px] bottom-[300px] sm:bottom-[110px] " src="../assets/calculator_right.png"  alt=""> -->
     <div class="h-[300px] sm:h-[700px] bg-[#1F1A20] sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-      <img class="w-full h-full object-cover" :src="img" alt="" />
+      <img class=" sm:pl-[5%] w-[600px] h-full object-cover" :src="img" alt="" />
     </div>
     <div class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div class="md:ml-auto md:w-1/2 md:pl-10">
