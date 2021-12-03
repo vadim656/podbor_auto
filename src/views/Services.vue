@@ -92,7 +92,7 @@ export default {
   },
   created () {
     // Simple GET request using fetch
-    fetch('http://perfect-podbor.ru/api/wp-json/wp/v2/posts/?categories=11')
+    fetch('http://perfect-podbor.ru/api/wp-json/wp/v2/posts/?categories=11&per_page=30')
       .then(response => response.json())
       .then(data => (this.services = data))
   },

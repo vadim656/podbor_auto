@@ -1,21 +1,21 @@
 <template>
-  <section class="flex justify-center  items-center">
-    <div class="w-full flex justify-center  lg:h-[800px] bg-[#1A1F22]">
+  <section class="flex justify-center  items-center ">
+    <div class="w-full flex justify-center  lg:h-[800px]" v-bind:style="{ 'background-image': 'url(' + img + ')' }">
       <div
-        class="z-10 grid grid-cols-1 grid-row-[1fr,auto] sm:grid-cols-[3fr,2fr] w-full items-stretch overflow-hidden"
+        class="z-10 grid grid-cols-1 grid-row-[1fr,auto] sm:grid-cols-[3fr,2fr,2fr] w-full items-stretch overflow-hidden"
       >
         <div
           class="offer w-full h-full  flex flex-col justify-items-center justify-self-center pl-[5%]"
         >
           <div
-            class="mt-4 lg:mt-0 flex flex-col justify-center w-full items-center lg:items-start px-2 lg:px-0 lg:pl-8 z-1 h-full text-[#fff] "
+            class="mt-4 lg:mt-0 flex flex-col justify-center w-full items-center lg:items-start px-2 lg:px-0 lg:pl-8 z-1 h-full text-[#fff]"
           >
             <div
-              class="text-[42px] lg:text-[100px] text-[#fff] font-bold z-10 uppercase mt-8 "
+              class="text-[42px] lg:text-[100px] text-[#fff] font-bold z-10 uppercase mt-8 a-1"
             >
               {{ title }}
             </div>
-            <span class="lg:text-2xl  text-center lg:text-left">
+            <span class="lg:text-2xl  mb-8 text-center lg:text-left a-3">
               Професcиональная помощь при выборе автомобиля <br />
               в г.Краснодар
             </span>
@@ -30,26 +30,28 @@
               - Полный спектр услуг по проверке и подбору автомобиля <br />
               от бюджетного до элитного
             </span>
-            <button
-              class="w-60 px-10 py-6 bg-gradient-to-r from-[#303483] bg-[#1B1E58] hover:bg-[#303483] text-white mt-4 rounded z-10"
+            <a
+            href="tel:89624609644"
+              class=" w-60 px-10 flex justify-center items-center py-6 bg-gradient-to-r from-[#303483] bg-[#1B1E58] hover:bg-[#303483] text-white mt-4 rounded z-10 a-3"
             >
               {{ button }}
-            </button>
+            </a>
+           
           </div>
           <div
-            class="w-full flex flex-col lg:flex-row sm:justify-start h-full items-center lg:items-center py-4"
+            class="w-full hidden sm:flex flex-col sm:justify-start h-full sm:pl-8 sm:items-start py-4 gap-4"
           >
-            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left">
+            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left a-2">
               <span class="text-[#5960EF] font-bold text-[36px]">5 лет</span>
               <br />на рынке
             </div>
-            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left">
+            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left a-2">
               <span class="text-[#5960EF] font-bold text-[36px]"
                 >3 000 000 ₽</span
               >
               <br />сэкономлено клиентам
             </div>
-            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left">
+            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left a-2">
               <span class="text-[#5960EF] font-bold text-[36px]"
                 >более 100</span
               >
@@ -57,8 +59,11 @@
             </div>
           </div>
         </div>
-        <div class=" w-full h-[650px] sm:h-[800px] sm:h-full relative  slider">
+        <div class="w-full h-[650px] sm:h-[750px] sm:h-full relative slider">
           <PSlider />
+        </div>
+        <div class="">
+          <img src="../assets/image/6M0A3579_adobespark.png" class="img-response object-cover" alt="">
         </div>
       </div>
 
@@ -76,10 +81,10 @@ import anime from 'animejs/lib/anime.es.js'
 export default {
   data () {
     return {
-      title: null,
-      button: null,
-      img: null,
-      imgFace: null,
+      title: '',
+      button: '',
+      img: '',
+      imgFace: '',
       errors: []
     }
   },
@@ -100,17 +105,53 @@ export default {
   },
   methods: {},
   updated () {
-    var elements = document.querySelectorAll('.swiper-slide')
+    var slider = document.querySelectorAll('.swiper-slide')
+    var img = document.querySelectorAll('.img-response')
     anime({
-      targets: elements,
+      targets: slider,
       direction: 'alternate',
       opacity: [0, 1],
-      delay: anime.stagger(50, { start: 100 }),
+      delay: anime.stagger(100, { start: 400 }),
+      loop: false,
+      easing: 'cubicBezier(.5, .05, .1, .3)'
+    })
+    anime({
+      targets: img,
+      direction: 'alternate',
+      opacity: [0, 1],
+      delay: 1000,
       loop: false,
       easing: 'linear'
+    })
+    anime({
+      targets: '.a-1',
+      direction: 'alternate',
+      opacity: [0, 1],
+      delay: 500,
+      loop: false,
+      easing: 'cubicBezier(.5, .05, .1, .3)'
+    })
+    anime({
+      targets: '.a-2',
+      direction: 'alternate',
+      opacity: [0, 1],
+      delay: anime.stagger(200),
+      loop: false,
+      easing: 'cubicBezier(.5, .05, .1, .3)'
+    })
+    anime({
+      targets: '.a-3',
+      direction: 'alternate',
+      opacity: [0, 1],
+      delay: anime.stagger(200),
+      loop: false,
+      easing: 'cubicBezier(.5, .05, .1, .3)'
     })
   }
 }
 </script>
 
-<style></style>
+<style>
+
+
+</style>

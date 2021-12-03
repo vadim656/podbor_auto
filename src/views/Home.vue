@@ -21,7 +21,7 @@
     <section class=" h-full my-8" >
       <PReport/>
     </section>
-    <section class="my-8 py-8">
+    <section class=" sm:my-8  sm:py-8">
       <PPopular/>
     </section>
     

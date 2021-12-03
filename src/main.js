@@ -11,21 +11,19 @@ import Services from './views/Services.vue'
 // ROUTER CONFIG
 const router = createRouter({
   history: createWebHistory(),
-  scrollBehavior: function (to, from, savedPosition) {
-    if (to.hash) {
-      return { selector: to.hash }
-      //Or for Vue 3:
-      //return {el: to.hash}
-    } else {
-      return { x: 0, y: 0 }
-    }
-  },
   routes: [
     { path: '/', component: Home, name: 'Home' },
     { path: '/about', component: About, name: 'About' },
     { path: '/prices', component: Prices, name: 'Prices' },
     { path: '/services', component: Services, name: 'Services' }
-  ]
+  ],
+})
+
+router.beforeEach(function (to, from, next) { 
+  setTimeout(() => {
+      window.scrollTo(0, 0);
+  }, 400);
+  next();
 })
 
 // TAILWIND CSS

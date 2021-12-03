@@ -47,11 +47,7 @@ export default {
   },
   created () {
     axios
-      .get('http://perfect-podbor.ru/api/wp-json/acf/v3/posts/2', {
-        timeout: 1000,
-        responseType: 'text',
-        decompress: true
-      })
+      .get('http://perfect-podbor.ru/api/wp-json/acf/v3/posts/2')
       .then(response => {
         this.img = response.data.acf.img_report
       })

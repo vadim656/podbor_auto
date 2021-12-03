@@ -3,7 +3,7 @@
   <header class="bg-[#1F1A20] sticky top-0 z-[99999] ">
     <nav class=" mx-auto w-full  sm:px-6 lg:px-8 sm:container" aria-label="Top">
       <div
-        class="w-full  px-4 py-2 grid grid-cols-[2fr,4fr,1fr] sm:flex items-center sm:justify-between border-b border-indigo-500 lg:border-none"
+        class="w-full  px-4 py-2 grid grid-cols-[2fr,4fr,1fr] sm:flex items-center sm:justify-between  lg:border-none"
       >
         <div class="flex items-center">
           <router-link to="/">
@@ -21,17 +21,15 @@
             </router-link>
           </div>
         </div>
-        <div class="lg:ml-10 lg:space-x-4  h-full">
+        <div class="lg:ml-10 lg:space-x-4  h-full flex items-center">
+          <SocialButton class="hidden sm:block"/>
+          <SocialTelegram class="hidden sm:block"/>
           <a
-            href="#"
+            href="tel:89624609644"
             class="inline-block bg-gradient-to-r from-[#303483] bg-[#1B1E58] text-[14px] lg:text-[18px] lg:ml-10 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
-            >+7 (000) 000-00-00</a
+            >+7(962) 460-96-44</a
           >
-          <a
-            href="#"
-            class=" bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-[#1B1E58] hover:bg-indigo-50 hidden lg:inline-block"
-            >Подобрать авто</a
-          >
+          
         </div>
         <div @click="showModal = true" class="flex sm:hidden items-center h-full ">
           <span class="text-white ">МЕНЮ</span>
@@ -87,6 +85,8 @@
 </template>
 
 <script>
+import SocialButton from "./UI/SocialButton.vue"
+import SocialTelegram from "./UI/SocialTelegram.vue"
 const navigation = [
   { name: 'Что проверяем', href: '/' },
   { name: 'Услуги', href: '/services' },
@@ -95,23 +95,24 @@ const navigation = [
 ]
 
 export default {
-  setup () {
-    return {
-      navigation
-    }
-  },
-  data () {
-    return {
-      showModal: false
-    }
-  },
-  props: {
-    img: {
-      default () {
-        return {}
-      }
-    }
-  }
+    setup() {
+        return {
+            navigation
+        };
+    },
+    data() {
+        return {
+            showModal: false
+        };
+    },
+    props: {
+        img: {
+            default() {
+                return {};
+            }
+        }
+    },
+    components: { SocialButton, SocialTelegram }
 }
 </script>
 

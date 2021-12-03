@@ -6,16 +6,16 @@
     }"
   >
     <ul
-      class=" pl-8 sm:pl-0 w-full list-none  rounded-lg sm:text-center overflow-auto whitespace-nowrap mx-auto flex flex-wrap sm:grid sm:grid-cols-1 lg:grid-cols-2 gap-4"
+      class=" pl-8 sm:pl-0 w-full list-none  rounded-lg sm:text-center  whitespace-nowrap flex flex-wrap sm:grid sm:grid-cols-1 lg:grid-cols-2 gap-4 m-1"
     >
       <li
         v-for="(tab, index) in tabList"
         :key="index"
         class="rounded-lg  hidden sm:flex justify-between sm:justify-center w-full min-w-[300px] items-center h-[90px] overflow-hidden"
         :class="{
-          'text-white bg-gradient-to-r from-[#303483] bg-[#1B1E58] shadow-xl':
+          'text-white  shadow-xl border-2 border-[#2F3381]':
             index + 1 === activeTab,
-          'text-[#1A1F22] bg-white  cursor-pointer': index + 1 !== activeTab
+          'border border-white  cursor-pointer': index + 1 !== activeTab
         }"
       >
         <!-- <img
@@ -85,6 +85,7 @@ export default {
     return {
       activeTab: 1
     }
-  }
+  },
+  
 }
 </script>

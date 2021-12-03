@@ -38,17 +38,19 @@ export default {
   },
   created () {
     axios
-      .get('http://perfect-podbor.ru/api/wp-json/wp/v2/posts/?categories=4', {
-        timeout: 1000,
-        responseType: 'text',
+      .get('http://perfect-podbor.ru/api/wp-json/wp/v2/posts/?categories=4&per_page=20', {
+        responseType: '',
         decompress: true
       })
       .then(response => {
         this.tabList = response.data
+        console.log(this.tabList.length + " шт " + "Что проверяем")
       })
       .catch(e => {
         this.errors.push(e)
       })
+      
+      
   },
   components: { PExaminationTab }
 }
