@@ -9,11 +9,14 @@
     <PMainScreen />
     
     <!-- <PPrices /> -->
-    <PExamination />
+    <section id="examination">
+      <PExamination />
+    </section>
+    
     <section>
       <PLiked/>
     </section>
-    <section class=" h-full px-8">
+    <section class=" h-full px-8 ">
       <div class="flex w-full">
         <PBenefits />
       </div>
@@ -21,8 +24,10 @@
     <section class=" h-full my-8" >
       <PReport/>
     </section>
-    <section class=" sm:my-8  sm:py-8">
-      <PPopular/>
+    <section class=" sm:my-8  sm:py-8 flex slider-footer justify-around h-full mx-auto container">
+      <PNewItemOne/>
+      <PNewItemTwo/>
+      <PNewItemThree/>
     </section>
     
     <!-- <section class="h-full px-8 flex justify-center h-[400px] pb-8">
@@ -41,7 +46,11 @@ import PExamination from '/src/components/p-Examination.vue'
 import PForm from '/src/components/p-Form.vue'
 import PLiked from '/src/components/p-Liked.vue'
 import PReport from '/src/components/p-Report.vue'
-import PPopular from '/src/components/p-Popular.vue'
+import PNewItemOne from '/src/components/p-New-Item-One.vue'
+import PNewItemTwo from '/src/components/p-New-Item-Two.vue'
+import PNewItemThree from '/src/components/p-New-Item-Three.vue'
+
+
 
 export default {
   components: {
@@ -52,24 +61,10 @@ export default {
     PForm,
     PLiked,
     PReport,
-    PPopular
-  },
-  // mounted () {
-  //   window.onscroll = function () {
-  //     myFunction()
-  //   }
-
-  //   function myFunction () {
-  //     var winScroll =
-  //       document.body.scrollTop || document.documentElement.scrollTop
-  //     var height =
-  //       document.documentElement.scrollHeight -
-  //       document.documentElement.clientHeight
-  //     var scrolled = (winScroll / height) * 100
-  //     document.getElementById('myBar').style.height = scrolled + '%'
-  //     // console.log(scrolled)
-  //   }
-  // }
+    PNewItemOne,
+    PNewItemThree,
+    PNewItemTwo
+},
 }
 </script>
 
@@ -100,6 +95,10 @@ body {
   height: 100%;
   background: #04aa6d;
   width: 8px;
+}
+
+.slider-footer .slide{
+  display: block !important;
 }
 
 </style>

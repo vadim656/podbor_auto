@@ -1,7 +1,7 @@
 <template>
   <div
     class="rounded-lg 
-     absolute sm:w-[400px]  h-[500px]
+     absolute sm:w-[400px]  h-[650px]
      flex flex-col justify-between gap-4 px-10 bg-[rgba(26,31,34,0.7)] 
     slide"
   >
@@ -25,7 +25,7 @@
         </li>
       </ul>
     </div>
-    <div class="text-white flex flex-col items-center pb-4 z-[10]">
+    <div class="text-white flex flex-col items-center pb-4 z-[10]">--legacy-peer-deps
       <span class="text-[24px] font-bold uppercase">
 от {{ price }} <span class="text-[14px]">руб. </span>        
       </span>

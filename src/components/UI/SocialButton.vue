@@ -1,5 +1,5 @@
 <template>
-  <a href="https://api.whatsapp.com/send?phone=89624609644&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C.." target="_blank">
+  <a href="https://api.whatsapp.com/message/RP6FT527GD6SI1" target="_blank">
     <svg
       width="23"
       height="23"

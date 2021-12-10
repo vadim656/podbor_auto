@@ -11,34 +11,44 @@
             <img class="h-8 sm:h-16 w-auto object-cover" :src="img" alt="" />
           </router-link>
           <div class="hidden ml-10 space-x-8 lg:block">
-            <router-link
-              v-for="link in navigation"
-              :key="link.name"
-              :to="link.href"
-              class="text-base font-medium text-white hover:text-indigo-50"
+            <a
+              v-scroll-to="{
+                el: '#examination',
+                offset: -75,
+              }"
+              class="text-base font-medium text-white hover:text-indigo-50 cursor-pointer"
             >
-              {{ link.name }}
-            </router-link>
+              Что проверяем
+            </a>
+             <router-link
+                    @click="showModal = false"
+                    v-for="link in navigation"
+                    :key="link.name"
+                    :to="link.href"
+                    class="text-base font-medium text-white hover:text-indigo-50"
+                  >
+                    {{ link.name }}
+                  </router-link>
           </div>
         </div>
         <div class="lg:ml-10 lg:space-x-4  h-full flex items-center">
-          <SocialButton class="hidden sm:block"/>
-          <SocialTelegram class="hidden sm:block"/>
+          <SocialInsta class="hidden sm:block" />
+          <SocialButton class="hidden sm:block" />
+          <SocialTelegram class="hidden sm:block" />
           <a
-            href="tel:89624609644"
+            href="tel:89054756888"
             class="inline-block bg-gradient-to-r from-[#303483] bg-[#1B1E58] text-[14px] lg:text-[18px] lg:ml-10 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
-            >+7(962) 460-96-44</a
+            >+7(905)475-68-88</a
           >
-          
         </div>
-        <div @click="showModal = true" class="flex sm:hidden items-center h-full ">
+        <div
+          @click="showModal = true"
+          class="flex sm:hidden items-center h-full "
+        >
           <span class="text-white ">МЕНЮ</span>
         </div>
         <transition name="fade" appear>
-          <div
-            v-if="showModal"
-            @click="showModal = false"
-          ></div>
+          <div v-if="showModal" @click="showModal = false"></div>
         </transition>
         <transition name="slide" appear>
           <div
@@ -52,7 +62,9 @@
               <span class=" text-white">ЗАКРЫТЬ</span>
             </div>
 
-            <div class="w-full top-0 left-0 absolute h-screen bg-gradient-to-r from-[#303483] bg-[#1B1E58] z-[1]">
+            <div
+              class="w-full top-0 left-0 absolute h-screen bg-gradient-to-r from-[#303483] bg-[#1B1E58] z-[1]"
+            >
               <div class="w-full mt-[40%]">
                 <ul class="w-full flex flex-col px-8">
                   <router-link
@@ -85,34 +97,35 @@
 </template>
 
 <script>
-import SocialButton from "./UI/SocialButton.vue"
-import SocialTelegram from "./UI/SocialTelegram.vue"
+import SocialButton from './UI/SocialButton.vue'
+import SocialTelegram from './UI/SocialTelegram.vue'
+import SocialInsta from './UI/SocialInsta.vue'
+
 const navigation = [
-  { name: 'Что проверяем', href: '/' },
   { name: 'Услуги', href: '/services' },
   { name: 'Документы', href: '/' },
   { name: 'О компании', href: '/about' }
 ]
 
 export default {
-    setup() {
-        return {
-            navigation
-        };
-    },
-    data() {
-        return {
-            showModal: false
-        };
-    },
-    props: {
-        img: {
-            default() {
-                return {};
-            }
-        }
-    },
-    components: { SocialButton, SocialTelegram }
+  setup () {
+    return {
+      navigation
+    }
+  },
+  data () {
+    return {
+      showModal: false
+    }
+  },
+  props: {
+    img: {
+      default () {
+        return {}
+      }
+    }
+  },
+  components: { SocialButton, SocialTelegram, SocialInsta }
 }
 </script>
 
@@ -124,7 +137,6 @@ export default {
 .fade-leave-active {
   transition: all 0.6s cubic-bezier(0.45, -0.58, 0.67, 1.51);
 } */
-
 
 .slide-enter-active,
 .slide-leave-active {

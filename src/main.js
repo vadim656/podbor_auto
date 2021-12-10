@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import VueScrollTo from 'vue-scrollto'
 
 // ROUTES
 import Home from './views/Home.vue'
@@ -26,11 +27,27 @@ router.beforeEach(function (to, from, next) {
   next();
 })
 
+
+
+
 // TAILWIND CSS
 import './index.css'
 
 // APP
 const app = createApp(App)
 
+app.use(VueScrollTo, {
+  container: "body",
+  duration: 500,
+  easing: "ease",
+  offset: 0,
+  force: true,
+  cancelable: true,
+  onStart: false,
+  onDone: false,
+  onCancel: false,
+  x: false,
+  y: true
+})
 app.use(router)
 app.mount('#app')

@@ -1,17 +1,17 @@
 <template>
   <div
     :class="{
-      'grid sm:grid-cols-[2fr,3fr] grid-cols-1 gap-8 justify-items-end justify-between sm:justify-center mb-4 w-full':
+      'grid sm:grid-cols-[3fr,2fr] grid-cols-1 gap-8 justify-items-end justify-between sm:justify-center mb-4 w-full':
         variant === 'horizontal'
     }"
   >
     <ul
-      class=" pl-8 sm:pl-0 w-full list-none  rounded-lg sm:text-center  whitespace-nowrap flex flex-wrap sm:grid sm:grid-cols-1 lg:grid-cols-2 gap-4 m-1"
+      class=" pl-8 sm:pl-0 w-full list-none  rounded-lg sm:text-center  whitespace-nowrap flex flex-wrap sm:grid sm:grid-cols-1 lg:grid-cols-3 gap-4 m-1"
     >
       <li
         v-for="(tab, index) in tabList"
         :key="index"
-        class="rounded-lg  hidden sm:flex justify-between sm:justify-center w-full min-w-[300px] items-center h-[90px] overflow-hidden"
+        class="rounded-lg  hidden sm:flex justify-between sm:justify-center w-full min-w-[250px] items-center h-[90px] overflow-hidden "
         :class="{
           'text-white  shadow-xl border-2 border-[#2F3381]':
             index + 1 === activeTab,
@@ -27,7 +27,7 @@
         <label
           :for="`${index}`"
           v-text="tab.title.rendered"
-          class="cursor-pointer flex items-center justify-center w-300px sm:w-[350px] h-[90px]  flex-shrink-1 px-4"
+          class="cursor-pointer flex items-center justify-center w-300px sm:w-[350px] h-[90px]  flex-shrink-1 px-4 cursor-pointer"
         />
         <!-- <router-link 
         class="block lg:hidden flex justify-center items-center pr-1 bg-[#2F3382] text-white h-full w-[150px]"
@@ -39,7 +39,7 @@
           type="radio"
           :value="index + 1"
           v-model="activeTab"
-          class="hidden w-full h-full"
+          class="hidden w-full h-full cursor-pointer"
         />
       </li>
       <li v-for="(tab, index) in tabList"
@@ -53,10 +53,10 @@
       <div
         :key="index"
         v-if="index + 1 === activeTab"
-        class="lg:flex flex flex-col  bg-white rounded-lg shadow-xl  text-[#1A1F22]  w-full lg:w-full h-full mx-auto hidden"
+        class="lg:flex flex flex-col  bg-white rounded-lg shadow-xl  text-[#1A1F22]  w-full lg:w-full h-full mx-auto hidden cursor-pointer"
       >
-        <img class="rounded-t-lg max-h-[300px] w-full object-cover" :src="tab.acf.img_tab" alt="" />
-        <span class="mt-4 p-4">
+        <img class="rounded-t-lg h-[200px] w-full object-cover flex-grow" :src="tab.acf.img_tab" alt="" />
+        <span class="mt-4 p-4 flex-shrink">
           {{ tab.content.rendered.replace(/(\<(\/?[^>]+)>)/g, '') }}
         </span>
 

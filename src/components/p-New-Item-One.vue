@@ -1,21 +1,16 @@
 <template>
   <div
     class="rounded-lg 
-     absolute sm:w-[400px]  h-[650px]
-     flex flex-col justify-between gap-4 px-10 bg-[rgba(26,31,34,0.7)] 
-    slide"
+     sm:w-[400px]  h-[500px]
+     flex flex-col justify-between px-10 bg-[rgba(26,31,34,0.7)] 
+    "
   >
-    <img
-      src="../assets/Noise.png"
-      
-      class="object-cover object-center w-full  top-0 left-0 h-full opacity-[20%] absolute z-[0]"
-    />
-    <div class="flex justify-center pt-4 z-[10]">
+    <div class="flex justify-center pt-4 ">
       <div class="text-[24px] text-center font-bold uppercase text-white">
        {{ title }}
       </div>
     </div>
-    <div class="text-white flex flex-col justify-start z-[10]">
+    <div class="text-white flex flex-col justify-start ">
       <ul>
         <li>
          
@@ -25,7 +20,7 @@
         </li>
       </ul>
     </div>
-    <div class="text-white flex flex-col items-center pb-4 z-[10]">
+    <div class="text-white flex flex-col items-center pb-4 ">
       <span class="text-[24px] font-bold uppercase">
 от {{ price }} <span class="text-[14px]">руб. </span>        
       </span>
@@ -38,6 +33,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import axios from 'axios'
 
@@ -53,7 +49,7 @@ export default {
   },
   created() {
     axios
-      .get('http://perfect-podbor.ru/api/wp-json/wp/v2/posts/132', {})
+      .get('http://perfect-podbor.ru/api/wp-json/wp/v2/posts/136', {})
       .then(response => {
         (this.title = response.data.acf.title_name),
         (this.desc = response.data.content.rendered),

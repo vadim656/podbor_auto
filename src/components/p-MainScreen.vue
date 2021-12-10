@@ -1,6 +1,6 @@
 <template>
   <section class="flex justify-center  items-center ">
-    <div class="w-full flex justify-center  lg:h-[800px]" v-bind:style="{ 'background-image': 'url(' + img + ')' }">
+    <div class="w-full flex justify-center  lg:h-[800px] bg-no-repeat bg-cover" v-bind:style="{ 'background-image': 'url(' + img + ')' }">
       <div
         class="z-10 grid grid-cols-1 grid-row-[1fr,auto] sm:grid-cols-[3fr,2fr,2fr] w-full items-stretch overflow-hidden"
       >
@@ -47,9 +47,9 @@
             </div>
             <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left a-2">
               <span class="text-[#5960EF] font-bold text-[36px]"
-                >3 000 000 ₽</span
+                >по 180</span
               >
-              <br />сэкономлено клиентам
+              <br />параметрам проверка автомобиля
             </div>
             <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left a-2">
               <span class="text-[#5960EF] font-bold text-[36px]"
@@ -93,7 +93,7 @@ export default {
     axios
       .get('http://perfect-podbor.ru/api/wp-json/acf/v3/posts/2')
       .then(response => {
-        ;(this.button = response.data.acf.button_name),
+        (this.button = response.data.acf.button_name),
           (this.title = response.data.acf.offertext),
           (this.imgFace = response.data.acf.kim_chlen),
           (this.img = response.data.acf.img_main_page)

@@ -2,15 +2,11 @@
   <div class="relative h-full z-[10]">
     <swiper
       :slidesPerView="'auto'"
-      :spaceBetween="0"
+      :navigation="true"
       :loop="true"
-      :pagination="{
-        clickable: true
-      }"
-      
        :speed="600" 
-      
-      class="mySwiper"
+       :centeredSlides="true"
+      class="mySwiper sm:h-[800px] ml-1 sm:ml-0"
     >
     
       <swiper-slide class="mr-4 sm:mr-0">
@@ -33,13 +29,12 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 
 // Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/pagination'
-
+import "swiper/css/navigation"
 // import Swiper core and required modules
-import SwiperCore, { Autoplay, Pagination, Navigation, Parallax } from 'swiper'
+import SwiperCore, { Autoplay,  Navigation } from 'swiper'
 
 // install Swiper modules
-SwiperCore.use([Autoplay, Pagination, Navigation, Parallax])
+SwiperCore.use([Autoplay,  Navigation])
 
 
 import PSliderItemOne     from './p-Slider-Item-One.vue'
@@ -58,7 +53,7 @@ export default {
 
 }
 </script>
-<style scoped>
+<style>
 
 .parallax-bg {
   position: absolute;
@@ -93,7 +88,7 @@ export default {
 }
 
 .swiper-slide {
-  width: 80%;
+  width: 100%;
 }
 
 .swiper-pagination-bullet {

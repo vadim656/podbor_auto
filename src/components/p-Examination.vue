@@ -15,9 +15,11 @@
           ></PExaminationTab>
         </div>
         <div class="w-full flex justify-center w-prose mt-10">
-          <router-link class="border-dotted-[#fff] border-b" to="/about"
-            >Как мы работаем</router-link
-          >
+          <button type="button" class="btn border px-4 py-2 rounded" @click="showModal">
+            Как мы работаем
+          </button>
+
+          <Modal v-show="isModalVisible" @close="closeModal" />
         </div>
       </div>
     </div>
@@ -28,31 +30,41 @@
 <script>
 import axios from 'axios'
 import PExaminationTab from './p-ExaminationTab.vue'
-
+import Modal from './UI/Modal-Exemin.vue'
 export default {
   data () {
     return {
       errors: [],
-      tabList: null
+      tabList: null,
+      isModalVisible: false
     }
   },
   created () {
     axios
-      .get('http://perfect-podbor.ru/api/wp-json/wp/v2/posts/?categories=4&per_page=20', {
-        responseType: '',
-        decompress: true
-      })
+      .get(
+        'http://perfect-podbor.ru/api/wp-json/wp/v2/posts/?categories=4&per_page=20',
+        {
+          responseType: '',
+          decompress: true
+        }
+      )
       .then(response => {
         this.tabList = response.data
-        console.log(this.tabList.length + " шт " + "Что проверяем")
+        console.log(this.tabList.length + ' шт ' + 'Что проверяем')
       })
       .catch(e => {
         this.errors.push(e)
       })
-      
-      
   },
-  components: { PExaminationTab }
+  methods: {
+      showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
+      }
+    },
+  components: { PExaminationTab, Modal }
 }
 </script>
 
