@@ -59,10 +59,10 @@
             </div>
           </div>
         </div>
-        <div class="w-full h-[650px] sm:h-[750px] sm:h-full relative slider">
+        <div class="w-full mt-8 sm:mt-0 h-[460px] sm:h-[750px] sm:h-full relative slider">
           <PSlider />
         </div>
-        <div class="">
+        <div class="-mt-20 sm:-mt-0">
           <img src="../assets/image/6M0A3579_adobespark.png" class="img-response object-cover" alt="">
         </div>
       </div>

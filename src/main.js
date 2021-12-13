@@ -8,15 +8,46 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Prices from './views/Prices.vue'
 import Services from './views/Services.vue'
+import Documentation from './views/Documentation.vue'
 
 // ROUTER CONFIG
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', component: Home, name: 'Home' },
-    { path: '/about', component: About, name: 'About' },
-    { path: '/prices', component: Prices, name: 'Prices' },
-    { path: '/services', component: Services, name: 'Services' }
+    { 
+      path: '/', 
+      component: Home, 
+      name: 'Home' ,
+      meta: { requiredService: true} 
+    },
+    { 
+      path: 
+      '/about', 
+      component: About, 
+      name: 'About',
+      meta: { requiredService: false} 
+    },
+    { 
+      path: 
+      '/prices', 
+      component: Prices, 
+      name: 'Prices',
+      meta: { requiredService: false} 
+    },
+    { 
+      path: 
+      '/services', 
+      component: Services, 
+      name: 'Services',
+      meta: { requiredService: false} 
+    },
+    { 
+      path: 
+      '/documentation', 
+      component: Documentation, 
+      name: 'Documentation',
+      meta: { requiredService: false} 
+    }
   ],
 })
 

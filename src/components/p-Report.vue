@@ -21,7 +21,7 @@
         </p>
         <div class="mt-8">
           <div class="inline-flex rounded-md shadow">
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
+            <a href="http://perfect-podbor.ru/api/wp-content/uploads/2021/12/ОТЧЕТ.pdf" download class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
               Скачать пример отчета
               <ExternalLinkIcon class="-mr-1 ml-3 h-5 w-5 text-gray-400" aria-hidden="true" />
             </a>

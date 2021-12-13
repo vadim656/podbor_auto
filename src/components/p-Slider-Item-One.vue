@@ -1,7 +1,7 @@
 <template>
   <div
     class="rounded-lg 
-     absolute sm:w-[400px]  h-[650px]
+     absolute sm:w-[400px] h-[400px] sm:h-[650px]
      flex flex-col justify-between gap-4 px-10 bg-[rgba(26,31,34,0.7)] 
     slide"
   >

@@ -1,12 +1,12 @@
 <template>
-  <div class="relative h-full z-[10]">
+  <div class="relative h-[440px] sm:h-full z-[10]">
     <swiper
       :slidesPerView="'auto'"
       :navigation="true"
       :loop="true"
        :speed="600" 
        :centeredSlides="true"
-      class="mySwiper sm:h-[800px] ml-1 sm:ml-0"
+      class="mySwiper h-[400px] sm:h-[800px] ml-1 sm:ml-0"
     >
     
       <swiper-slide class="mr-4 sm:mr-0">

@@ -7,11 +7,11 @@
       >
         <div class="flex items-center">
           <router-link to="/">
-            <span class="sr-only">eee</span>
             <img class="h-8 sm:h-16 w-auto object-cover" :src="img" alt="" />
           </router-link>
           <div class="hidden ml-10 space-x-8 lg:block">
             <a
+              v-if="$route.meta.requiredService"
               v-scroll-to="{
                 el: '#examination',
                 offset: -75,
@@ -103,7 +103,7 @@ import SocialInsta from './UI/SocialInsta.vue'
 
 const navigation = [
   { name: 'Услуги', href: '/services' },
-  { name: 'Документы', href: '/' },
+  { name: 'Документы', href: '/documentation' },
   { name: 'О компании', href: '/about' }
 ]
 
