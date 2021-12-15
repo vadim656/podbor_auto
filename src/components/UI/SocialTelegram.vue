@@ -1,5 +1,5 @@
 <template>
-  <a href="https://t.me/foxsisss" target="_blank">
+  <a href="https://t.me/perfect_auto" target="_blank">
     <svg
       width="23"
       height="19"

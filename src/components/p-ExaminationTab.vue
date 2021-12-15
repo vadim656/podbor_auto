@@ -6,12 +6,12 @@
     }"
   >
     <ul
-      class=" pl-8 sm:pl-0 w-full list-none  rounded-lg sm:text-center  whitespace-nowrap flex flex-wrap sm:grid sm:grid-cols-1 lg:grid-cols-3 gap-4 m-1"
+      class=" pl-3 sm:pl-0 w-full list-none  rounded-lg sm:text-center  whitespace-nowrap flex flex-wrap sm:grid sm:grid-cols-1 lg:grid-cols-3 gap-4 m-1"
     >
       <li
         v-for="(tab, index) in tabList"
         :key="index"
-        class="rounded-lg  hidden sm:flex justify-between sm:justify-center w-full min-w-[250px] items-center h-[90px] overflow-hidden "
+        class="rounded-lg  flex flex-wrap justify-between sm:justify-center sm:min-w-[250px] sm:items-center sm:h-[90px] overflow-hidden "
         :class="{
           'text-white  shadow-xl border-2 border-[#2F3381]':
             index + 1 === activeTab,
@@ -27,7 +27,7 @@
         <label
           :for="`${index}`"
           v-text="tab.title.rendered"
-          class="cursor-pointer flex items-center justify-center w-300px sm:w-[350px] h-[90px]  flex-shrink-1 px-4 cursor-pointer"
+          class="cursor-pointer flex items-center justify-center sm:min w-300px sm:w-[350px] sm:h-[90px]  flex-shrink-1 py-2 px-4 sm:px-4 cursor-pointer text-[12px] sm:text-[18px]"
         />
         <!-- <router-link 
         class="block lg:hidden flex justify-center items-center pr-1 bg-[#2F3382] text-white h-full w-[150px]"
@@ -42,22 +42,23 @@
           class="hidden w-full h-full cursor-pointer"
         />
       </li>
-      <li v-for="(tab, index) in tabList"
-        :key="index"
-        class="flex sm:hidden flex-wrap border  sm: py-2 px-4 rounded">
-        <span> {{ tab.title.rendered }}</span>
-
-      </li>
     </ul>
     <template v-for="(tab, index) in tabList">
       <div
         :key="index"
         v-if="index + 1 === activeTab"
-        class="lg:flex flex flex-col  bg-white rounded-lg shadow-xl  text-[#1A1F22]  w-full lg:w-full h-full mx-auto hidden cursor-pointer"
+        class="lg:flex flex flex-col   bg-white rounded-lg shadow-xl  text-[#1A1F22]  w-[calc(100%-20px)] lg:w-full h-full mx-auto cursor-pointer"
       >
-        <img class="rounded-t-lg h-[200px] w-full object-cover flex-grow" :src="tab.acf.img_tab" alt="" />
-        <span class="mt-4 p-4 flex-shrink">
-          {{ tab.content.rendered.replace(/(\<(\/?[^>]+)>)/g, '') }}
+        <img
+          class="sm:rounded-t-lg rounded-b-lg h-[200px] w-full object-cover flex-grow sm:order-first order-last"
+          :src="tab.acf.img_tab"
+          alt=""
+        />
+        <span 
+        v-html="tab.content.rendered"
+        class="mt-1 sm:mt-4 p-4 flex-shrink text-[14px] sm:text-[14px]" 
+        >
+         
         </span>
 
         <slot :name="`tabPanel-${index + 1}`" />
@@ -85,7 +86,8 @@ export default {
     return {
       activeTab: 1
     }
-  },
+  }
   
+
 }
 </script>

@@ -4,21 +4,19 @@
       :slidesPerView="'auto'"
       :navigation="true"
       :loop="true"
-       :speed="600" 
-       :centeredSlides="true"
+      :speed="600"
+      :centeredSlides="true"
       class="mySwiper h-[400px] sm:h-[800px] ml-1 sm:ml-0"
     >
-    
+      <swiper-slide class="mr-4 sm:mr-0"> 
+        <PSliderItemThree />
+        </swiper-slide>
       <swiper-slide class="mr-4 sm:mr-0">
-        <PSliderItemOne/>
+        <PSliderItemTwo />
       </swiper-slide>
       <swiper-slide class="mr-4 sm:mr-0">
-        <PSliderItemTwo/>
+        <PSliderItemOne />
       </swiper-slide>
-       <swiper-slide class="mr-4 sm:mr-0">
-        <PSliderItemThree/>>
-      </swiper-slide>
-
       
     </swiper>
   </div>
@@ -29,18 +27,16 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 
 // Import Swiper styles
 import 'swiper/css'
-import "swiper/css/navigation"
+import 'swiper/css/navigation'
 // import Swiper core and required modules
-import SwiperCore, { Autoplay,  Navigation } from 'swiper'
+import SwiperCore, { Autoplay, Navigation } from 'swiper'
 
 // install Swiper modules
-SwiperCore.use([Autoplay,  Navigation])
+SwiperCore.use([Autoplay, Navigation])
 
-
-import PSliderItemOne     from './p-Slider-Item-One.vue'
-import PSliderItemTwo     from './p-Slider-Item-Two.vue'
-import PSliderItemThree   from './p-Slider-Item-Three.vue'
-
+import PSliderItemOne from './p-Slider-Item-One.vue'
+import PSliderItemTwo from './p-Slider-Item-Two.vue'
+import PSliderItemThree from './p-Slider-Item-Three.vue'
 
 export default {
   components: {
@@ -49,12 +45,10 @@ export default {
     PSliderItemOne,
     PSliderItemTwo,
     PSliderItemThree
-},
-
+  }
 }
 </script>
 <style>
-
 .parallax-bg {
   position: absolute;
   left: 0;
@@ -96,8 +90,7 @@ export default {
   height: 20px;
   background-color: #fff;
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background-color: #272d83;
 }
-
 </style>

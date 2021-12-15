@@ -1,7 +1,7 @@
 <template>
   <section class="flex  justify-center  items-center text-white">
     <div class="container py-4 sm:mt-8 h-full ">
-      <div class="w-full flex justify-center h-20">
+      <div class="w-full flex justify-center py-4 sm:py-0 sm:h-20">
         <h3 class="text-[24px] lg:text-[36px] font-bold uppercase ">
           Что мы проверяем
         </h3>
@@ -15,7 +15,11 @@
           ></PExaminationTab>
         </div>
         <div class="w-full flex justify-center w-prose mt-10">
-          <button type="button" class="btn border px-4 py-2 rounded" @click="showModal">
+          <button
+            type="button"
+            class="btn border px-4 py-2 rounded"
+            @click="showModal"
+          >
             Как мы работаем
           </button>
 
@@ -35,7 +39,7 @@ export default {
   data () {
     return {
       errors: [],
-      tabList: null,
+      tabList: [],
       isModalVisible: false
     }
   },
@@ -49,7 +53,7 @@ export default {
         }
       )
       .then(response => {
-        this.tabList = response.data
+        this.tabList = response.data.sort((a, b) =>   b.title.rendered - a.title.rendered);
         console.log(this.tabList.length + ' шт ' + 'Что проверяем')
       })
       .catch(e => {

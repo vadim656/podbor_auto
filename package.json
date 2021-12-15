@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "build:css": "tailwindcss -o src/tailwind.css --minify"
+    "css": "tailwindcss -o src/tailwind.css --minify"
   },
   "dependencies": {
     "@guillaumebriday/vue-scroll-progress-bar": "^1.0.0",

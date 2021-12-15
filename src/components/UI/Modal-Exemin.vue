@@ -1,26 +1,15 @@
 <template>
   <div class="modal-backdrop px-20">
     <div class="modal rounded-2xl ">
-      <header class="modal-header text-[black]">
-        <slot name="header">
-          Список как я понял
-        </slot>
-        <!-- <button
-          type="button"
-          class="btn-close"
-          @click="close"
-        >
-          x
-        </button> -->
-      </header>
 
-      <section class="modal-body text-[black] rounded-2xl">
-        <slot name="body" class="">
-          Текст
-        </slot>
+      <section class="modal-body text-[#212121] rounded-2xl">
+        <div  class="text-[#212121]"
+        v-html="info">
+          
+        </div>
        </section>
 
-      <footer class="modal-footer text-[black]">
+      <footer class="modal-footer text-[#212121]">
         <button
           type="button"
           class="btn-green bg-gradient-to-r from-[#303483] bg-[#1B1E58] px-4 py-2 text-white rounded"
@@ -34,6 +23,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
   export default {
     name: 'Modal',
     methods: {
@@ -41,6 +32,21 @@
         this.$emit('close');
       },
     },
+    data () {
+      return {
+        info: ''
+      }
+    },
+    created() {
+    axios
+      .get('http://perfect-podbor.ru/api/wp-json/wp/v2/posts/314', {})
+      .then(response => {
+        (this.info = response.data.acf.modalka)
+      })
+      .catch(e => {
+        this.errors.push(e)
+      })
+  }
   };
 </script>
 

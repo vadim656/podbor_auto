@@ -76,6 +76,18 @@
                   >
                     {{ link.name }}
                   </router-link>
+                  <div class="w-ful flex justify-start mt-10">
+                    <SocialTelegram
+                    class="mr-4"
+                    />
+                    <SocialInsta
+                    class="mr-4"
+                    />
+                    <SocialButton
+                    class="mr-4"
+                    />
+                  </div>
+                  
                 </ul>
               </div>
             </div>

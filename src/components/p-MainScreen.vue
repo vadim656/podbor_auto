@@ -31,7 +31,7 @@
               от бюджетного до элитного
             </span>
             <a
-            href="tel:89624609644"
+            href="tel:89054756888"
               class=" w-60 px-10 flex justify-center items-center py-6 bg-gradient-to-r from-[#303483] bg-[#1B1E58] hover:bg-[#303483] text-white mt-4 rounded z-10 a-3"
             >
               {{ button }}
@@ -39,20 +39,20 @@
            
           </div>
           <div
-            class="w-full hidden sm:flex flex-col sm:justify-start h-full sm:pl-8 sm:items-start py-4 gap-4"
+            class="w-full  sm:flex flex-col sm:justify-start h-full sm:pl-8 items-start py-4 gap-4"
           >
-            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left a-2">
-              <span class="text-[#5960EF] font-bold text-[36px]">5 лет</span>
+            <div class="text-[24px] lg:mr-20 text-white text-left a-2">
+              <span class="text-[#5960EF] font-bold  text-[24px] sm:text-[36px]">5 лет</span>
               <br />на рынке
             </div>
-            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left a-2">
-              <span class="text-[#5960EF] font-bold text-[36px]"
+            <div class="text-[24px] lg:mr-20 text-white text-left a-2">
+              <span class="text-[#5960EF] font-bold  text-[24px] sm:text-[36px]"
                 >по 180</span
               >
               <br />параметрам проверка автомобиля
             </div>
-            <div class="text-[24px] lg:mr-20 text-white text-center sm:text-left a-2">
-              <span class="text-[#5960EF] font-bold text-[36px]"
+            <div class="text-[24px] lg:mr-20 text-white text-left a-2">
+              <span class="text-[#5960EF] font-bold  text-[24px] sm:text-[36px]"
                 >более 100</span
               >
               <br />авто куплено
@@ -104,7 +104,7 @@ export default {
       })
   },
   methods: {},
-  updated () {
+  mounted () {
     var slider = document.querySelectorAll('.swiper-slide')
     var img = document.querySelectorAll('.img-response')
     anime({

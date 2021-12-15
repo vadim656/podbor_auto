@@ -20,17 +20,19 @@
         <li>
          
         </li>
-        <li class="text-[12px] sm:text-[14px]">
-          {{ desc.replace(/(\<(\/?[^>]+)>)/g, '') }}
+        <li class="text-[12px] sm:text-[14px]" 
+        v-html="desc"
+        >
+         
         </li>
       </ul>
     </div>
-    <div class="text-white flex flex-col items-center pb-4 z-[10]">--legacy-peer-deps
+    <div class="text-white flex flex-col items-center pb-4 z-[10]">
       <span class="text-[24px] font-bold uppercase">
 от {{ price }} <span class="text-[14px]">руб. </span>        
       </span>
       <a
-        href="tel:89624609644"
+        href="tel:89054756888"
         class="sm:mx-10 px-6 py-4 bg-gradient-to-r from-[#303483] bg-[#1B1E58] hover:bg-[#303483] text-white mt-4 rounded"
       >
         Заказать диагностику

@@ -12,7 +12,7 @@
           <div
           v-for="item in items"
           :key="item.id"
-            class="col-span-1 flex justify-center bg-gray-50 rounded overflow-hidden"
+            class="col-span-1 flex justify-center bg-gray-50 rounded overflow-hidden  sm:w-full"
           >
             <img
               class=" object-cover w-full"

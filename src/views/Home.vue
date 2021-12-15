@@ -24,16 +24,18 @@
     <section class=" h-full my-8" >
       <PReport/>
     </section>
-    <section class=" sm:my-8  sm:py-8 flex-col flex sm:flex-row sm:gap-4 slider-footer justify-around h-full mx-auto container">
-      <PNewItemOne
-      class="m-2 border border-[rgba(196,196,196,0.2)]"
-      />
-      <PNewItemTwo
-      class="m-2 border border-[rgba(196,196,196,0.2)]"
-      />
+    <section class=" sm:my-8  sm:py-8 flex-col flex  sm:flex-row sm:gap-4 slider-footer justify-center items-center sm:justify-around h-full w-full mx-auto container">
       <PNewItemThree
       class="m-2 border border-[rgba(196,196,196,0.2)]"
       />
+      
+      <PNewItemTwo
+      class="m-2 border border-[rgba(196,196,196,0.2)]"
+      />
+      <PNewItemOne
+      class="m-2 border border-[rgba(196,196,196,0.2)]"
+      />
+      
     </section>
     <section>
       <PTesty/>
