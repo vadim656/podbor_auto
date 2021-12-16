@@ -1,15 +1,14 @@
 <template>
   <swiper
-    :autoHeight="true"
     :spaceBetween="20"
     :navigation="true"
     :pagination="{
       clickable: true
     }"
-    class="mySwiper text-[red]"
+    class="mySwiper text-[red] "
   >
-    <swiper-slide v-for="(href, index) in img" :key="index" :virtualIndex="index">
-      <img :src="href.url" alt="" />
+    <swiper-slide v-for="(href, index) in img" :key="index" :virtualIndex="index" >
+      <img class="object-cover w-full h-full" :src="href.url" alt="" />
     </swiper-slide>
   </swiper>
 </template>
@@ -58,8 +57,10 @@ export default {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  max-height: 400px;
+  max-height: 750px;
+
 }
+
 
 .swiper-pagination-bullet {
   width: 20px;

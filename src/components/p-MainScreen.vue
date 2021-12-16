@@ -47,7 +47,7 @@
             </div>
             <div class="text-[24px] lg:mr-20 text-white text-left a-2">
               <span class="text-[#5960EF] font-bold  text-[24px] sm:text-[36px]"
-                >по 180</span
+                >по 108</span
               >
               <br />параметрам проверка автомобиля
             </div>

@@ -35,7 +35,7 @@
         href="tel:89054756888"
         class="sm:mx-10 px-6 py-4 bg-gradient-to-r from-[#303483] bg-[#1B1E58] hover:bg-[#303483] text-white mt-4 rounded"
       >
-        Заказать диагностику
+        Заказать услугу
       </a>
     </div>
   </div>

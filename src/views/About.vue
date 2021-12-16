@@ -1,16 +1,14 @@
 <template>
-  <div class="container mx-auto min-h-screen text-white">
+  <div class="container mx-auto min-h-screen text-white ">
     <h1 class=" w-full text-center text-2xl my-10">О компании</h1>
-    <div class="grid grid-cols-1 sm:grid-cols-[40%,60%] gap-4 w-full h-full">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full h-full">
       <div class="h-full">
         <h3 class="text-center">{{ title }}</h3>
          <br />
-        <span class="h-full">{{ info.replace(/(\<(\/?[^>]+)>)/g, '') }} </span>
+        <span class="h-full" v-html="info"></span>
       </div>
       <!-- /.bord -->
-      <PSliderAbout
-     
-      />
+      <PSliderAbout/>
       <!-- /.bord -->
     </div>
     <!-- /.grid -->

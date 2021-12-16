@@ -1,6 +1,6 @@
 <template>
   <div class="modal-backdrop px-20">
-    <div class="modal rounded-2xl ">
+    <div class="modal rounded-2xl w-full max-w-[600px]">
 
       <section class="modal-body text-[#212121] rounded-2xl">
         <div  class="text-[#212121]"
@@ -9,10 +9,10 @@
         </div>
        </section>
 
-      <footer class="modal-footer text-[#212121]">
+      <footer class="modal-footer text-[#212121] flex justify-center">
         <button
           type="button"
-          class="btn-green bg-gradient-to-r from-[#303483] bg-[#1B1E58] px-4 py-2 text-white rounded"
+          class="btn-green bg-gradient-to-r from-[#303483] bg-[#1B1E58] w-[280px] px-4 py-2 text-white rounded"
           @click="close"
         >
           Закрыть
@@ -87,8 +87,7 @@ import axios from 'axios'
 
   .modal-footer {
     border-top: 1px solid #eeeeee;
-    flex-direction: column;
-    justify-content: flex-end;
+
   }
 
   .modal-body {

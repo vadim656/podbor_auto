@@ -98,7 +98,7 @@ body {
   background-color: transparent;
 }
 
-.progress-container {
+/* .progress-container {
   width: 8px;
   height: 100%;
   background: transparent;
@@ -108,7 +108,7 @@ body {
   height: 100%;
   background: #04aa6d;
   width: 8px;
-}
+} */
 
 .slider-footer .slide{
   display: block !important;
