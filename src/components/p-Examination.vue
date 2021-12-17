@@ -17,7 +17,7 @@
         <div class="w-full flex justify-center w-prose mt-10">
           <button
             type="button"
-            class="btn border px-4 py-2 rounded"
+            class="btn border px-4 py-2 rounded relative"
             @click="showModal"
           >
             Как мы работаем

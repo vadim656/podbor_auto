@@ -53,9 +53,9 @@
             </div>
             <div class="text-[24px] lg:mr-20 text-white text-left a-2">
               <span class="text-[#5960EF] font-bold  text-[24px] sm:text-[36px]"
-                >более 100</span
+                >300+</span
               >
-              <br />авто куплено
+              <br />авто подобрано
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@
   <header class="bg-[#1F1A20] sticky top-0 z-[99999] ">
     <nav class=" mx-auto w-full  sm:px-6 lg:px-8 sm:container" aria-label="Top">
       <div
-        class="w-full  px-4 py-2 grid grid-cols-[2fr,4fr,1fr] sm:flex items-center sm:justify-between  lg:border-none"
+        class="w-full  px-4 py-3 grid grid-cols-[2fr,4fr,1fr] sm:flex items-center sm:justify-between  lg:border-none"
       >
         <div class="flex items-center">
           <router-link to="/">
