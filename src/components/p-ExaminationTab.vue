@@ -68,6 +68,9 @@
 </template>
 
 <script>
+
+
+
 export default {
   props: {
     tabList: {

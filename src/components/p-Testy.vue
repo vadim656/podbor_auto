@@ -1,7 +1,7 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div class="text-white">
-    <div class="max-w-7xl mx-auto py-12  sm:px-6 lg:py-4 mb-4">
+    <div class="container mx-auto py-12 lg:py-4 mb-4">
       <div class="lg:grid lg:grid-cols-1 lg:gap-8 lg:items-center">
         <h2 class="text-3xl font-extrabold text-center sm:text-left   sm:text-4xl px-4">
           Отзывы реальных клиентов

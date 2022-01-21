@@ -9,6 +9,7 @@ import About from './views/About.vue'
 import Prices from './views/Prices.vue'
 import Services from './views/Services.vue'
 import Documentation from './views/Documentation.vue'
+import Contacts from './views/Contacts.vue'
 
 // ROUTER CONFIG
 const router = createRouter({
@@ -46,6 +47,13 @@ const router = createRouter({
       '/documentation', 
       component: Documentation, 
       name: 'Documentation',
+      meta: { requiredService: false} 
+    },
+    { 
+      path: 
+      '/contacts', 
+      component: Contacts, 
+      name: 'Contacts',
       meta: { requiredService: false} 
     }
   ],

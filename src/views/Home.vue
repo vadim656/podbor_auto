@@ -12,7 +12,9 @@
     <section id="examination">
       <PExamination />
     </section>
-    
+     <section>
+      <PTesty/>
+    </section>
     <section>
       <PLiked/>
     </section>
@@ -24,22 +26,8 @@
     <section class=" h-full my-8" >
       <PReport/>
     </section>
-    <section class=" sm:my-8  sm:py-8 flex-col flex  sm:flex-row sm:gap-4 slider-footer justify-center items-center sm:justify-around h-full w-full mx-auto container">
-      <PNewItemThree
-      class="m-2 border border-[rgba(196,196,196,0.2)]"
-      />
-      
-      <PNewItemTwo
-      class="m-2 border border-[rgba(196,196,196,0.2)]"
-      />
-      <PNewItemOne
-      class="m-2 border border-[rgba(196,196,196,0.2)]"
-      />
-      
-    </section>
-    <section>
-      <PTesty/>
-    </section>
+ 
+   
     
     <!-- <section class="h-full px-8 flex justify-center h-[400px] pb-8">
       <PForm />

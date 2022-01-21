@@ -116,7 +116,8 @@ import SocialInsta from './UI/SocialInsta.vue'
 const navigation = [
   { name: 'Услуги', href: '/services' },
   { name: 'Документы', href: '/documentation' },
-  { name: 'О компании', href: '/about' }
+  { name: 'О компании', href: '/about' },
+  { name: 'Контакты', href: '/contacts' }
 ]
 
 export default {
